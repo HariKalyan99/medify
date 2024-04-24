@@ -20,6 +20,14 @@ height: 832px;
 width: 100%;
 }
 
+.specialization {
+    
+    height: 729px;
+    width: 100%;
+    background: rgb(231,240,255);
+background: linear-gradient(98deg, rgba(231,240,255,1) 0%, rgba(232,241,255,0.47102591036414565) 100%);
+}
+
 
 @media (max-width: 992px) {
     .navigationLink:hover {
