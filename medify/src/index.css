@@ -1,0 +1,9 @@
+*{
+  margin: 0;padding: 0;
+}
+
+
+
+.offcanvas, .offcanvas-lg, .offcanvas-md, .offcanvas-sm, .offcanvas-xl, .offcanvas-xxl {
+  --bs-offcanvas-width: 300px !important; 
+}
