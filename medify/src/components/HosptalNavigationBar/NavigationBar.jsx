@@ -22,7 +22,7 @@ const NavigationBar = ({becomeActive}) => {
         </div>
         <div className="offcanvas-body d--mdflex justify-content-md-center align-items-md-center">
           <ul className="navbar-nav flex-grow-1 justify-content-end">
-            <li className="nav-item"><a className={` navigationLink ${becomeActive === "findDoctors" && "doctorsActive"}`} href="#">Find Doctors</a></li>
+            <li className="nav-item"><Link to={"/search-results"} className={` navigationLink ${becomeActive === "findDoctors" && "doctorsActive"}`} href="#">Find Doctors</Link></li>
             <li className="nav-item"><a className=" navigationLink" href="#">Hospitals</a></li>
             <li className="nav-item"><a className=" navigationLink" href="#">Medicines</a></li>
             <li className="nav-item"><a className=" navigationLink" href="#">Surgeries</a></li>
