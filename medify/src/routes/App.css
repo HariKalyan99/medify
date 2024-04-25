@@ -28,6 +28,58 @@ width: 100%;
 background: linear-gradient(98deg, rgba(231,240,255,1) 0%, rgba(232,241,255,0.47102591036414565) 100%);
 }
 
+.doctoreBg {
+    background: rgb(225,243,255);
+background: linear-gradient(98deg, rgba(225,243,255,1) 0%, rgba(42,167,255,1) 100%);
+display: flex;
+justify-content: center;
+align-items: flex-end;
+border-top-left-radius: 50%;
+border-top-right-radius: 50%;
+height: 400px;
+width: 350px;
+border: 8px solid white;
+box-shadow: 1px 10px 1rem #e0e2e7;
+}
+
+.patientCaring {
+    height: 598px;
+    width: 100%;
+    background: rgb(231,240,255);
+background: linear-gradient(98deg, rgba(231,240,255,1) 0%, rgba(232,241,255,0.47102591036414565) 100%);
+}
+
+.contribute {
+    height: 789px;
+    width: 100%;
+    background: rgb(231,240,255);
+background: linear-gradient(98deg, rgba(231,240,255,1) 0%, rgba(232,241,255,0.47102591036414565) 100%);
+}
+
+
+.accordion-item {
+    border: none !important;
+}
+
+.accordion {
+    --bs-accordion-active-bg: none !important;
+    --bs-accordion-btn-icon: url(https://static.vecteezy.com/system/resources/previews/010/150/250/original/button-plus-icon-sign-symbol-design-free-png.png) !important;
+
+    --bs-accordion-btn-active-icon:  url(https://static.vecteezy.com/system/resources/previews/010/150/250/original/button-plus-icon-sign-symbol-design-free-png.png) !important;
+}
+
+.appDownload {
+    height: 607px;
+    width: 100%;
+    background: rgb(231,240,255);
+background: linear-gradient(98deg, rgba(231,240,255,1) 0%, rgba(232,241,255,0.47102591036414565) 100%);
+}
+
+.foot {
+    height: 424px;
+    width: 100%;
+    background: #1B3C74;
+}
 
 @media (max-width: 992px) {
     .navigationLink:hover {
