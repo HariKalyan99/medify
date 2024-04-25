@@ -81,6 +81,10 @@ background: linear-gradient(98deg, rgba(231,240,255,1) 0%, rgba(232,241,255,0.47
     background: #1B3C74;
 }
 
+.container-fluid {
+    --bs-gutter-x: 0 !important;
+}
+
 @media (max-width: 992px) {
     .navigationLink:hover {
         color: blue;

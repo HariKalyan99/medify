@@ -621,17 +621,17 @@ const LandingPage = () => {
             </div>
           </div>
         </div>
-        <div className="foot container-fluid position-relative z-2">
+        <div className="foot container-fluid d-flex flex-column position-relative z-2">
           <div className="container d-flex h-100 gap-5 justify-content-center">
             <div className="w-100 d-flex flex-column justify-content-around ">
               <a class="navbar-brand" href="#">
                 <img src={logo} alt="medify-logo" />
               </a>
               <div className="d-flex justify-content-between w-75">
-                <img src={f} alt="fb" />
-                <img src={t} alt="x" />
-                <img src={yt} alt="yt" />
-                <img src={pn} alt="pt" />
+                <a href="#"><img src={f} alt="fb" /></a>
+                <a href="#"><img src={t} alt="x" /></a>
+                <a href="#"><img src={yt} alt="yt" /></a>
+                <a href="#"><img src={pn} alt="pt" /></a>
               </div>
             </div>
             <div className="w-100 d-flex flex-column justify-content-center align-items-start gap-4">
@@ -688,6 +688,11 @@ const LandingPage = () => {
               <img src={ar} alt="arrowList" /> <span style={{color: "white"}}>Privacy policy</span>
             </div>
             </div>
+          
+          </div>
+          <div className="container">
+          <hr style={{color: "white"}}/>
+            <p className="text-light">Copyright ©2023 Tronice Nursing Home.com. All Rights Reserved</p>
           </div>
         </div>
       </div>
