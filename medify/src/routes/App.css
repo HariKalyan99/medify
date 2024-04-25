@@ -10,10 +10,12 @@
 
 .navigationLink:hover {
     border-bottom: 5px solid #2AA7FF;
+    color: #2AA7FF;
 }
 
 .doctorsActive {
     border-bottom: 5px solid #2AA7FF;
+    color: #2AA7FF;
 }
 
 .heroContainer {

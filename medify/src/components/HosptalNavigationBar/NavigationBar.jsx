@@ -1,8 +1,9 @@
 import React from 'react'
 import logo from '../../assets/medlogo.svg'
-import { Link } from 'react-router-dom'
+import { Link} from 'react-router-dom'
 
 const NavigationBar = ({becomeActive}) => {
+  
   return (
     <nav className="navbar navbar-expand-lg text-light container-fluid"  style={{backgroundColor: "transparent", height: "96px"}}>
     <div className="container-fluid-lg container-xl">
@@ -29,7 +30,9 @@ const NavigationBar = ({becomeActive}) => {
             <li className="nav-item"><a className=" navigationLink" href="#">Facilities</a></li>
           </ul>
           <div className='px-3'>
+          <Link to={"/bookings"}>
           <button type='button' className='btn text-light' style={{backgroundColor: "#2AA8FF"}}>My Bookings</button>
+          </Link>
           </div>
         </div>
       </div>
