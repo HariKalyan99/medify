@@ -94,7 +94,7 @@ const SearchHospitals = ({ from }) => {
         </div>
 
         
-        <Link to={"/search-results"}><button onClick={() => searchForCenters("search")} disabled={stateList.length > 1 && cityList.length > 0 ? false : true} type='button' className='btn text-light px-5' style={{backgroundColor: "#2AA8FF"}}><IoIosSearch size={30}/> Search</button></Link>
+        <button onClick={() => searchForCenters("search")} disabled={stateList.length > 1 && cityList.length > 0 ? false : true} type='button' className='btn text-light px-5' style={{backgroundColor: "#2AA8FF"}}><IoIosSearch size={30}/> Search</button>
         </div>
 
         <div className="mt-5">

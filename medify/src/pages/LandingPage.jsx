@@ -284,17 +284,17 @@ const LandingPage = () => {
         <h1>Read Our Latest News</h1>
         {/* album  */}
 
-        <div class="album py-5 ">
-          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-            <div class="col">
-              <div class="card shadow-sm">
+        <div className="album py-5 ">
+          <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div className="col">
+              <div className="card shadow-sm">
                 <img src={cardimg} alt="cardimg" />
-                <div class="card-body">
+                <div className="card-body">
                   <p>Medical | March 31, 2022</p>
-                  <p class="card-text">
+                  <p className="card-text">
                     6 Tips To Protect Your Mental Health When You're Sick
                   </p>
-                  <div class="d-flex justify-content-start align-items-center">
+                  <div className="d-flex justify-content-start align-items-center">
                     <div>
                       <img src={reb} alt="" />
                     </div>
@@ -304,15 +304,15 @@ const LandingPage = () => {
               </div>
             </div>
 
-            <div class="col">
-              <div class="card shadow-sm">
+            <div className="col">
+              <div className="card shadow-sm">
                 <img src={cardimg} alt="cardimg" />
-                <div class="card-body">
+                <div className="card-body">
                   <p>Medical | March 31, 2022</p>
-                  <p class="card-text">
+                  <p className="card-text">
                     6 Tips To Protect Your Mental Health When You're Sick
                   </p>
-                  <div class="d-flex justify-content-start align-items-center">
+                  <div className="d-flex justify-content-start align-items-center">
                     <div>
                       <img src={reb} alt="" />
                     </div>
@@ -322,15 +322,15 @@ const LandingPage = () => {
               </div>
             </div>
 
-            <div class="col">
-              <div class="card shadow-sm">
+            <div className="col">
+              <div className="card shadow-sm">
                 <img src={cardimg} alt="cardimg" />
-                <div class="card-body">
+                <div className="card-body">
                   <p>Medical | March 31, 2022</p>
-                  <p class="card-text">
+                  <p className="card-text">
                     6 Tips To Protect Your Mental Health When You're Sick
                   </p>
-                  <div class="d-flex justify-content-start align-items-center">
+                  <div className="d-flex justify-content-start align-items-center">
                     <div>
                       <img src={reb} alt="" />
                     </div>
@@ -446,13 +446,13 @@ const LandingPage = () => {
             <img src={handheart} alt="heart_in_hand" className=" position-absolute bottom-50 end-0"/>
           </div>
           <div
-            class="accordion accordion-flush w-100"
+            className="accordion accordion-flush w-100"
             id="accordionFlushExample"
           >
-            <div class="accordion-item m-4">
-              <h2 class="accordion-header">
+            <div className="accordion-item m-4">
+              <h2 className="accordion-header">
                 <button
-                  class="accordion-button collapsed"
+                  className="accordion-button collapsed"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#flush-collapseOne"
@@ -464,20 +464,20 @@ const LandingPage = () => {
               </h2>
               <div
                 id="flush-collapseOne"
-                class="accordion-collapse collapse"
+                className="accordion-collapse collapse"
                 data-bs-parent="#accordionFlushExample"
               >
-                <div class="accordion-body">
+                <div className="accordion-body">
                   Placeholder content for this accordion, which is intended to
                   demonstrate the <code>.accordion-flush</code> class. This is
                   the first item's accordion body.
                 </div>
               </div>
             </div>
-            <div class="accordion-item  m-4">
-              <h2 class="accordion-header">
+            <div className="accordion-item  m-4">
+              <h2 className="accordion-header">
                 <button
-                  class="accordion-button collapsed"
+                  className="accordion-button collapsed"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#flush-collapseTwo"
@@ -489,10 +489,10 @@ const LandingPage = () => {
               </h2>
               <div
                 id="flush-collapseTwo"
-                class="accordion-collapse collapse"
+                className="accordion-collapse collapse"
                 data-bs-parent="#accordionFlushExample"
               >
-                <div class="accordion-body">
+                <div className="accordion-body">
                   Placeholder content for this accordion, which is intended to
                   demonstrate the <code>.accordion-flush</code> class. This is
                   the second item's accordion body. Let's imagine this being
@@ -500,10 +500,10 @@ const LandingPage = () => {
                 </div>
               </div>
             </div>
-            <div class="accordion-item  m-4">
-              <h2 class="accordion-header">
+            <div className="accordion-item  m-4">
+              <h2 className="accordion-header">
                 <button
-                  class="accordion-button collapsed"
+                  className="accordion-button collapsed"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#flush-collapseThree"
@@ -515,10 +515,10 @@ const LandingPage = () => {
               </h2>
               <div
                 id="flush-collapseThree"
-                class="accordion-collapse collapse"
+                className="accordion-collapse collapse"
                 data-bs-parent="#accordionFlushExample"
               >
-                <div class="accordion-body">
+                <div className="accordion-body">
                   Placeholder content for this accordion, which is intended to
                   demonstrate the <code>.accordion-flush</code> class. This is
                   the third item's accordion body. Nothing more exciting
@@ -530,10 +530,10 @@ const LandingPage = () => {
               </div>
             </div>
 
-            <div class="accordion-item  m-4">
-              <h2 class="accordion-header">
+            <div className="accordion-item  m-4">
+              <h2 className="accordion-header">
                 <button
-                  class="accordion-button collapsed"
+                  className="accordion-button collapsed"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#flush-collapseFour"
@@ -545,10 +545,10 @@ const LandingPage = () => {
               </h2>
               <div
                 id="flush-collapseFour"
-                class="accordion-collapse collapse"
+                className="accordion-collapse collapse"
                 data-bs-parent="#accordionFlushExample"
               >
-                <div class="accordion-body">
+                <div className="accordion-body">
                   Placeholder content for this accordion, which is intended to
                   demonstrate the <code>.accordion-flush</code> class. This is
                   the third item's accordion body. Nothing more exciting
@@ -638,7 +638,7 @@ const LandingPage = () => {
         <div className="foot container-fluid d-flex flex-column position-relative z-2">
           <div className="container d-flex h-100 gap-5 justify-content-center">
             <div className="w-100 d-flex flex-column justify-content-around ">
-              <a class="navbar-brand" href="#">
+              <a className="navbar-brand" href="#">
                 <img src={logo} alt="medify-logo" />
               </a>
               <div className="d-flex justify-content-between w-75">

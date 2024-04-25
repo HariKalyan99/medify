@@ -44,9 +44,9 @@ const HealthCenterContextProvider = ({ children }) => {
       }
     };
 
-    if(invokerFn === "invoke"){
-        fetchStates();
-    }
+        if(invokerFn === "invoke"){
+          fetchStates();
+        }
 
     return () => {
       controller.abort();
@@ -80,7 +80,7 @@ const HealthCenterContextProvider = ({ children }) => {
         navigate("/search-results");
         setInputCity("");
         setInputHealth("");
-        setSearchResults("")
+        setSearchResults("");
         setInvokerFn("invoke")
       } catch (error) {
         console.log("Error", error);
