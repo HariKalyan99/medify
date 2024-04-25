@@ -1,13 +1,14 @@
 import React from 'react'
 import logo from '../../assets/medlogo.svg'
+import { Link } from 'react-router-dom'
 
-const NavigationBar = () => {
+const NavigationBar = ({becomeActive}) => {
   return (
     <nav className="navbar navbar-expand-lg text-light container-fluid"  style={{backgroundColor: "transparent", height: "96px"}}>
     <div className="container-fluid-lg container-xl">
-      <a className="navbar-brand" href="#">
+      <Link to={"/"} className="navbar-brand" >
         <img src={logo} alt="" />
-      </a>
+      </Link>
       <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvas" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
       </button>
@@ -20,7 +21,7 @@ const NavigationBar = () => {
         </div>
         <div className="offcanvas-body d--mdflex justify-content-md-center align-items-md-center">
           <ul className="navbar-nav flex-grow-1 justify-content-end">
-            <li className="nav-item"><a className=" navigationLink" href="#">Find Doctors</a></li>
+            <li className="nav-item"><a className={` navigationLink ${becomeActive === "findDoctors" && "doctorsActive"}`} href="#">Find Doctors</a></li>
             <li className="nav-item"><a className=" navigationLink" href="#">Hospitals</a></li>
             <li className="nav-item"><a className=" navigationLink" href="#">Medicines</a></li>
             <li className="nav-item"><a className=" navigationLink" href="#">Surgeries</a></li>

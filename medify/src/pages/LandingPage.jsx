@@ -24,20 +24,9 @@ import con1 from "../assets/con1.svg";
 import con2 from "../assets/con2.svg";
 import con3 from "../assets/con3.svg";
 import con4 from "../assets/con4.svg";
-import FAQ1 from "../assets/FAQ1.svg";
-import app1 from "../assets/app1.svg";
-import app2 from "../assets/app2.svg";
-import arrow from "../assets/arrow.svg";
-import { FaGooglePlay } from "react-icons/fa";
-import { FaApple } from "react-icons/fa";
-import logo from "../assets/medlogo.svg";
-import f from "../assets/f.svg";
-import yt from "../assets/yt.svg";
-import t from "../assets/t.svg";
-import pn from "../assets/pn.svg";
-import ar from "../assets/arrowright.svg";
-import handheart from "../assets/handheart.svg";
-import smile from "../assets/smile.svg";
+
+import AppFooter from "../components/Footer/AppFooter";
+import FaqSection from "../components/faq/FaqSection";
 const LandingPage = () => {
   return (
     <div>
@@ -425,7 +414,7 @@ const LandingPage = () => {
         </div>
       </div>
 
-      <div className="container d-flex flex-column justify-content-center align-items-center w-100 mt-5 mb-2">
+      {/* <div className="container d-flex flex-column justify-content-center align-items-center w-100 mt-5 mb-2">
         <p>Get Your Answer</p>
         <h1>Frequently Asked Questions</h1>
         <div className="d-flex justify-content-between align-items-center w-100">
@@ -561,9 +550,10 @@ const LandingPage = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
+      <FaqSection />
 
-      <div className="appDownload container-fluid">
+      {/* <div className="appDownload container-fluid">
         <div className="container d-flex justify-content-between g-5 ">
           <div className=" d-flex justify-content-between position-relative mt-5">
             <div
@@ -709,7 +699,8 @@ const LandingPage = () => {
             <p className="text-light">Copyright ©2023 Tronice Nursing Home.com. All Rights Reserved</p>
           </div>
         </div>
-      </div>
+      </div> */}
+      <AppFooter />
     </div>
   );
 };
