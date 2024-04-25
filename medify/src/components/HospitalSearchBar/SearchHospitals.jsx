@@ -6,6 +6,7 @@ import Capsule from '../../assets/Capsule.svg'
 import doctors from '../../assets/doctors.svg'
 import labs from '../../assets/labs.svg'
 import hospitals from '../../assets/hospitals.svg'
+import { Link } from "react-router-dom";
 
 
 const SearchHospitals = ({ from }) => {
@@ -93,7 +94,7 @@ const SearchHospitals = ({ from }) => {
         </div>
 
         
-        <button onClick={() => searchForCenters("search")} disabled={stateList.length > 1 && cityList.length > 0 ? false : true} type='button' className='btn text-light px-5' style={{backgroundColor: "#2AA8FF"}}><IoIosSearch size={30}/> Search</button>
+        <Link to={"/search-results"}><button onClick={() => searchForCenters("search")} disabled={stateList.length > 1 && cityList.length > 0 ? false : true} type='button' className='btn text-light px-5' style={{backgroundColor: "#2AA8FF"}}><IoIosSearch size={30}/> Search</button></Link>
         </div>
 
         <div className="mt-5">

@@ -36,7 +36,8 @@ import yt from "../assets/yt.svg";
 import t from "../assets/t.svg";
 import pn from "../assets/pn.svg";
 import ar from "../assets/arrowright.svg";
-
+import handheart from "../assets/handheart.svg";
+import smile from "../assets/smile.svg";
 const LandingPage = () => {
   return (
     <div>
@@ -428,8 +429,21 @@ const LandingPage = () => {
         <p>Get Your Answer</p>
         <h1>Frequently Asked Questions</h1>
         <div className="d-flex justify-content-between align-items-center w-100">
-          <div>
+          <div className=" position-relative d-flex">
             <img src={FAQ1} alt="doctor-caring" />
+            <div className=" position-absolute top-50 ">
+           <div className="d-flex w-100 h-100 justify-content-center align-items-center px-3" style={{backgroundColor: "white", borderRadius: "1rem"}}>
+           <div className="d-flex m-3" >
+           <img src={smile} alt="heart_in_hand" />
+           </div>
+           <div className="d-flex flex-column mt-3 justify-content-center align-items-start">
+                <h3 style={{fontSize: "19px"}}>84K+</h3>
+                <p style={{fontSize: "17px"}}>Happy patients</p>
+           </div>
+           </div>
+              
+            </div>
+            <img src={handheart} alt="heart_in_hand" className=" position-absolute bottom-50 end-0"/>
           </div>
           <div
             class="accordion accordion-flush w-100"
