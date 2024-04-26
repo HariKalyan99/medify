@@ -10,6 +10,7 @@ import tick from "../assets/tick.svg";
 import bookHos from "../assets/bookHos.svg";
 import like from "../assets/like.svg";
 import ad from "../assets/ad.svg";
+import Offercarousel from "../components/Offercarousel/Offercarousel";
 
 const SearchResultsPage = () => {
   const { getHealthCenter } = useContext(healthCenterStore);
@@ -17,9 +18,15 @@ const SearchResultsPage = () => {
 
   const [bookingOpen, setBookingOpen] = useState(false);
 
+  const [hospitalId, setHospitalId] = useState("");
+
+
+
   useEffect(() => {
-    console.log(getHealthCenter);
-  }, []);
+    setHospitalId(hospitalId)
+  }, [hospitalId]);
+
+
   return (
     <div>
       {/* <h1>SearchResultsPage</h1>
@@ -77,7 +84,7 @@ const SearchResultsPage = () => {
                     <p>Search for health centers in your location</p>
                     </div>
               </div>
-            </div>  : getHealthCenter.map((center, ind) => <div key={ind} className="bookContainer w-100 h-100 d-flex flex-column pb-5 pt-2">
+            </div>  : getHealthCenter.map((center, ind) => <div key={center["Provider ID"]} className="bookContainer w-100 h-100 d-flex flex-column pb-5 pt-2">
               <div className="w-100 d-flex">
                 <div className="px-5" style={{ width: "25%", height: "100%" }}>
                   <img src={bookHos} alt="healthCenter_logo" />
@@ -103,7 +110,7 @@ const SearchResultsPage = () => {
                       >
                         FREE
                       </span>{" "}
-                      <span style={{ color: "#787887", fontSize: "14px" }}>
+                      <span style={{ color: "#787887", fontSize: "14px", textDecoration: "line-through"}}>
                         ₹500
                       </span>{" "}
                       Consultation fee at clinic
@@ -135,18 +142,36 @@ const SearchResultsPage = () => {
                   >
                     Available Today
                   </p>
-                  <button
+                   {bookingOpen && center["Provider ID"] === hospitalId ? <button
                     type="button"
                     className="btn text-light px-5"
                     style={{ backgroundColor: "#2AA8FF" }}
-                    onClick={() => setBookingOpen(!bookingOpen)}
+                    onClick={() => {
+                    setBookingOpen(false)
+                    setHospitalId(center["Provider ID"])
+                    }
+                }
+                  >
+                    Cancel booking
+                  </button>  : <button
+                    type="button"
+                    className="btn text-light px-5"
+                    style={{ backgroundColor: "#2AA8FF" }}
+                    onClick={() => {
+                    setBookingOpen(true)
+                    setHospitalId(center["Provider ID"])
+                    }
+                }
                   >
                     Book FREE Center Visit
-                  </button>
+                  </button> }
                 </div>
               </div>
               {/* book open */}
-              {bookingOpen &&  <div>
+              
+            </div>)}
+            {bookingOpen &&
+              <div>
                 <div
                   className="mt-3 d-flex justify-content-center"
                   style={{ width: "100%", borderTop: "1px solid #E8E8F0" }}
@@ -163,17 +188,24 @@ const SearchResultsPage = () => {
 
                 <div
                   style={{
-                    height: "302px",
+                    height: "402px",
                     backgroundColor: "white",
-                    marginLeft: "2%",
-                    marginRight: "2%",
                   }}
                 >
-                  <div
-                    className="w-100 h-25"
-                    style={{ borderBottom: "1px solid #E8E8F0" }}
+                  <div className="d-flex justify-content-center align-items-center position-relative">
+                    <div style={{height: "70px", width: "70px", borderRadius: "50%", border: "1px solid #E8E8F0", left: "39px",top:"12px", backgroundColor: "white"}} className="position-absolute"></div>
+                    <div
+                    className="h-25 pt-4 px-5"
+                    style={{width: "100%"}}
+                    
                   >
                     {/* carousel */}
+                    <div >
+                        
+                    <Offercarousel from={"bookingDates"}/>
+                    </div>
+                  </div>
+                    <div style={{height: "70px", width: "70px", borderRadius: "50%", border: "1px solid #E8E8F0", right: "39px",top:"12px", backgroundColor: "white" }} className="position-absolute"></div>
                   </div>
                   <div
                     className="w-100 h-25 d-flex gap-5 justify-content-start align-items-center"
@@ -297,7 +329,6 @@ const SearchResultsPage = () => {
                   </div>
                 </div>
               </div>}
-            </div>)}
             
             
           </div>

@@ -1,23 +1,15 @@
 import React from 'react'
 import logo from '../../assets/medlogo.svg'
-import { Link, useNavigate} from 'react-router-dom'
+import { Link} from 'react-router-dom'
 
 const NavigationBar = ({becomeActive}) => {
-
-  const navigate = useNavigate();
-
-
-  const handleClick = () => {
-    // add invoker fn 
-    navigate("/")
-  }
   
   return (
     <nav className="navbar navbar-expand-lg text-light container-fluid"  style={{backgroundColor: "transparent", height: "96px"}}>
     <div className="container-fluid-lg container-xl">
-      <div onClick={handleClick} className="navbar-brand" >
+      <Link to={"/"} className="navbar-brand" >
         <img src={logo} alt="medify-logo" />
-      </div>
+      </Link>
       <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvas" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
       </button>

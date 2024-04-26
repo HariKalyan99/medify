@@ -10,7 +10,6 @@ export const healthCenterStore = createContext({
   handleInputState: () => {},
   handleInputCity: () => {},
   searchForCenters: () => {},
-  
 });
 
 const HealthCenterContextProvider = ({ children }) => {

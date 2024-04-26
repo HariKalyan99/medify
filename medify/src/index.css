@@ -3,6 +3,13 @@
 }
 
 
+:root {
+  --swiper-navigation-size: 25px !important;
+  --swiper-theme-color: #2AA7FF !important;
+}
+
+
+
 
 .offcanvas, .offcanvas-lg, .offcanvas-md, .offcanvas-sm, .offcanvas-xl, .offcanvas-xxl {
   --bs-offcanvas-width: 300px !important; 

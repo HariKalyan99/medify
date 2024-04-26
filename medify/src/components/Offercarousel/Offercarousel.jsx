@@ -5,11 +5,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-
+import "swiper/css/scrollbar";
+import "swiper/css/navigation";
 // import required modules
-import styles from "./Offercarousel.module.css";
+import "./Offercarousel.module.css";
 
-import { Pagination } from "swiper/modules";
+import { Pagination, Scrollbar, Navigation } from "swiper/modules";
 import client1 from "../../assets/offer1.svg";
 import client2 from "../../assets/offer2.svg";
 
@@ -26,6 +27,7 @@ export default function Offercarousel({ from }) {
         <Swiper
           slidesPerView={3}
           spaceBetween={10}
+          
           pagination={{
             clickable: true,
           }}
@@ -186,12 +188,68 @@ export default function Offercarousel({ from }) {
         </Swiper>
       </>
     );
-  } else {
+  } else if(from === "bookingDates") {
+    return (
+        <Swiper
+          slidesPerView={3}
+          spaceBetween={10}
+          navigation={true}
+          scrollbar={true}
+          breakpoints={{
+            640: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 1,
+              spaceBetween: 30,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 40,
+            },
+          }}
+          modules={[Pagination, Scrollbar, Navigation]}
+          className="mySwiper"
+        >
+          <SwiperSlide className="mb-3" >
+            <h1 style={{fontSize: "16px", textAlign: "center"}}>Today</h1>
+            <p style={{fontSize: "12px", color : "#01A400", textAlign: "center"}}>11 slots available</p>
+          </SwiperSlide>
+          <SwiperSlide className="mb-3">
+            <h1 style={{fontSize: "16px", textAlign: "center"}}>Today</h1>
+            <p style={{fontSize: "12px", color : "#01A400", textAlign: "center"}}>11 slots available</p>
+          </SwiperSlide>
+          <SwiperSlide className="mb-3">
+            <h1 style={{fontSize: "16px", textAlign: "center"}}>Today</h1>
+            <p style={{fontSize: "12px", color : "#01A400", textAlign: "center"}}>11 slots available</p>
+          </SwiperSlide>
+          <SwiperSlide className="mb-3">
+            <h1 style={{fontSize: "16px", textAlign: "center"}}>Today</h1>
+            <p style={{fontSize: "12px", color : "#01A400", textAlign: "center"}}>11 slots available</p>
+          </SwiperSlide>
+          <SwiperSlide className="mb-3">
+            <h1 style={{fontSize: "16px", textAlign: "center"}}>Today</h1>
+            <p style={{fontSize: "12px", color : "#01A400", textAlign: "center"}}>11 slots available</p>
+          </SwiperSlide>
+          <SwiperSlide className="mb-3">
+            <h1 style={{fontSize: "16px", textAlign: "center"}}>Today</h1>
+            <p style={{fontSize: "12px", color : "#01A400", textAlign: "center"}}>11 slots available</p>
+          </SwiperSlide>
+          <SwiperSlide className="mb-3">
+            <h1 style={{fontSize: "16px", textAlign: "center"}}>Today</h1>
+            <p style={{fontSize: "12px", color : "#01A400", textAlign: "center"}}>11 slots available</p>
+          </SwiperSlide>
+          
+        </Swiper>
+    );
+  }else{
     return (
       <>
         <Swiper
           slidesPerView={3}
           spaceBetween={10}
+          
           pagination={{
             clickable: true,
           }}
