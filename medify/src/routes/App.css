@@ -98,10 +98,22 @@ background: linear-gradient(98deg, rgba(231,240,255,1) 0%, rgba(232,241,255,0.47
 }
 
 .healthCenters{
-    height: 1000px;
+    height: auto;
     width: 100%;
     background: rgb(231,240,255);
 background: linear-gradient(98deg, rgba(231,240,255,1) 0%, rgba(232,241,255,0.47102591036414565) 100%);
+}
+
+.bookContainer {
+    background-color: #ffffff;
+    height: 269px;
+    border-radius: 1rem;
+}
+
+.bookAppointment {
+    background-color: white;
+    height: 268px;
+    border-radius: 1rem;
 }
 
 @media (max-width: 992px) {

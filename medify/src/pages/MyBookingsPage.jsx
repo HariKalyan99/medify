@@ -32,6 +32,7 @@ const MyBookingsPage = () => {
 
         <div className='container-fluid healthCenters'>
             {/* healthcenters to be populated  */}
+            <h1>Bookings</h1>
         </div>
         <FaqSection />
 

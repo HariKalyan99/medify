@@ -140,7 +140,7 @@ const SearchHospitals = ({ from }) => {
             className="d-flex justify-content-center align-items-center flex-column"
             style={{
               backgroundColor: "#FAFBFE",
-              border: "1px solid black",
+              
               height: "153px",
               width: "203px",
               borderRadius: "1rem",
@@ -155,7 +155,7 @@ const SearchHospitals = ({ from }) => {
             className="d-flex justify-content-center align-items-center flex-column"
             style={{
               backgroundColor: "#FAFBFE",
-              border: "1px solid black",
+              
               height: "153px",
               width: "203px",
               borderRadius: "1rem",
@@ -170,7 +170,7 @@ const SearchHospitals = ({ from }) => {
             className="d-flex justify-content-center align-items-center flex-column"
             style={{
               backgroundColor: "#FAFBFE",
-              border: "1px solid black",
+              
               height: "153px",
               width: "203px",
               borderRadius: "1rem",
@@ -185,7 +185,7 @@ const SearchHospitals = ({ from }) => {
             className="d-flex justify-content-center align-items-center flex-column"
             style={{
               backgroundColor: "#FAFBFE",
-              border: "1px solid black",
+              
               height: "153px",
               width: "203px",
               borderRadius: "1rem",
@@ -200,7 +200,7 @@ const SearchHospitals = ({ from }) => {
             className="d-flex justify-content-center align-items-center flex-column"
             style={{
               backgroundColor: "#FAFBFE",
-              border: "1px solid black",
+              
               height: "153px",
               width: "203px",
               borderRadius: "1rem",
