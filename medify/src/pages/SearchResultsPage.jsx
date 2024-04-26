@@ -168,9 +168,7 @@ const SearchResultsPage = () => {
                 </div>
               </div>
               {/* book open */}
-              
-            </div>)}
-            {bookingOpen &&
+              {bookingOpen && center["Provider ID"] === hospitalId && 
               <div>
                 <div
                   className="mt-3 d-flex justify-content-center"
@@ -329,6 +327,7 @@ const SearchResultsPage = () => {
                   </div>
                 </div>
               </div>}
+            </div>)}
             
             
           </div>
