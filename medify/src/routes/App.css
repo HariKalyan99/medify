@@ -116,6 +116,12 @@ background: linear-gradient(98deg, rgba(231,240,255,1) 0%, rgba(232,241,255,0.47
     border-radius: 1rem;
 }
 
+.bookingLists {
+    height: 314px;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 1rem;
+}
 
 .swiper-scrollbar-drag {
     position: relative;
@@ -151,7 +157,18 @@ background: linear-gradient(98deg, rgba(231,240,255,1) 0%, rgba(232,241,255,0.47
     margin-left: 70px !important;
 }
 
+.timeBtn {
+    background-color: #ffffff;
+}
 
+.timeBtn:hover{
+    cursor: pointer;
+    background-color: #2AA7FF !important;
+}
+
+.timeBtnActive{
+    background-color: #2AA7FF !important;
+}
 
 @media (max-width: 992px) {
     .navigationLink:hover {
