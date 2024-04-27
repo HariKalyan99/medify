@@ -16,8 +16,8 @@ const MyBookingsPage = () => {
     useEffect(() => {
         let dataLocal = JSON.parse(localStorage.getItem('bookingSlot'));
         if(dataLocal.length > 0){
-            console.log(dataLocal)
             setDataFromLocal(dataLocal);
+            //make a booking list array as a common producer using the context api..
         }
     } , [])
 
