@@ -29,6 +29,19 @@ const HealthCenterContextProvider = ({ children }) => {
 
   const navigate = useNavigate();
 
+  
+
+
+  // useEffect(() => {
+  //   let dateArr = [];
+  //   for(let i = 1 ; i<= 7; i++){
+  //     let dates = new Date(new Date().getTime()+(i*24*60*60*1000));
+  //     dateArr.push(dates.toString().split(" ").splice(1, 3).join(" "));
+  //   }
+  //   setDatesAccording([...datesAccording, ...dateArr])
+  //   console.log(datesAccording)
+  // }, [])
+
   useEffect(() => {
     const controller = new AbortController();
     const signal = { controller };
@@ -47,6 +60,16 @@ const HealthCenterContextProvider = ({ children }) => {
         if(invokerFn === "invoke"){
           fetchStates();
         }
+
+        let today = new Date().toDateString().toString().split(" ").splice(1).join(" ");
+        let dateArr = [today];
+    for(let i = 1 ; i<= 7; i++){
+      let dates = new Date(new Date().getTime()+(i*24*60*60*1000));
+      dateArr.push(dates.toString().split(" ").splice(1, 3).join(" "));
+    }
+
+    localStorage.setItem('datesArr', JSON.stringify(dateArr));
+    
 
     return () => {
       controller.abort();

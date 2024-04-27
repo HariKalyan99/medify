@@ -20,6 +20,34 @@ const SearchResultsPage = () => {
 
   const [hospitalId, setHospitalId] = useState("");
 
+  const [getDateLocal, setDateLocal] = useState("");
+
+  const [geTimeLocal, setTimeLocal] = useState("");
+
+  const [bookingSlots, setBookingSlots] = useState([]);
+
+  const timeForLocal = (val) => {
+    setTimeLocal(val);
+  }
+  const dateForLocal = (val) => {
+    setDateLocal(val);
+  }
+
+  const addToLocal = (e, center) => {
+    e.preventDefault();
+    const booking = {
+      time: geTimeLocal,
+      date: getDateLocal,
+      center
+    }
+    setBookingSlots([booking, ...bookingSlots])
+  }
+
+
+  useEffect(() => {
+      localStorage.setItem('bookingSlot', JSON.stringify(bookingSlots));
+  }, [bookingSlots])
+
 
 
   useEffect(() => {
@@ -169,7 +197,7 @@ const SearchResultsPage = () => {
               </div>
               {/* book open */}
               {bookingOpen && center["Provider ID"] === hospitalId && 
-              <div>
+              <form onSubmit={(e) => addToLocal(e, center)}>
                 <div
                   className="mt-3 d-flex justify-content-center"
                   style={{ width: "100%", borderTop: "1px solid #E8E8F0" }}
@@ -191,7 +219,7 @@ const SearchResultsPage = () => {
                   }}
                 >
                   <div className="d-flex justify-content-center align-items-center position-relative">
-                    <div style={{height: "70px", width: "70px", borderRadius: "50%", border: "1px solid #E8E8F0", left: "39px",top:"12px", backgroundColor: "white"}} className="position-absolute"></div>
+                    <div style={{height: "60px", width: "60px", borderRadius: "50%", border: "1px solid #E8E8F0", left: "39px",top:"12px", backgroundColor: "white"}} className="position-absolute"></div>
                     <div
                     className="h-25 pt-4 px-5"
                     style={{width: "100%"}}
@@ -200,10 +228,10 @@ const SearchResultsPage = () => {
                     {/* carousel */}
                     <div >
                         
-                    <Offercarousel from={"bookingDates"}/>
+                    <Offercarousel from={"bookingDates"} dateForLocal={dateForLocal}/>
                     </div>
                   </div>
-                    <div style={{height: "70px", width: "70px", borderRadius: "50%", border: "1px solid #E8E8F0", right: "39px",top:"12px", backgroundColor: "white" }} className="position-absolute"></div>
+                    <div style={{height: "60px", width: "60px", borderRadius: "50%", border: "1px solid #E8E8F0", right: "39px",top:"12px", backgroundColor: "white" }} className="position-absolute"></div>
                   </div>
                   <div
                     className="w-100 h-25 d-flex gap-5 justify-content-start align-items-center"
@@ -221,6 +249,8 @@ const SearchResultsPage = () => {
                         border: "1px solid #2AA7FF",
                       }}
                       className="btn"
+ type="button"
+                      onClick={() => timeForLocal("11:30 AM")}
                     >
                       11:30 AM
                     </button>
@@ -241,6 +271,8 @@ const SearchResultsPage = () => {
                         border: "1px solid #2AA7FF",
                       }}
                       className="btn"
+ type="button"
+                      onClick={() => timeForLocal("12:00 PM")}
                     >
                       12:00 PM
                     </button>
@@ -250,6 +282,8 @@ const SearchResultsPage = () => {
                         border: "1px solid #2AA7FF",
                       }}
                       className="btn"
+ type="button"
+                      onClick={() => timeForLocal("12:30 PM")}
                     >
                       12:30 PM
                     </button>
@@ -259,6 +293,8 @@ const SearchResultsPage = () => {
                         border: "1px solid #2AA7FF",
                       }}
                       className="btn"
+ type="button"
+                      onClick={() => timeForLocal("01:00 PM")}
                     >
                       01:00 PM
                     </button>
@@ -268,6 +304,8 @@ const SearchResultsPage = () => {
                         border: "1px solid #2AA7FF",
                       }}
                       className="btn"
+ type="button"
+                      onClick={() => timeForLocal("02:00 PM")}
                     >
                       02:00 PM
                     </button>
@@ -277,6 +315,8 @@ const SearchResultsPage = () => {
                         border: "1px solid #2AA7FF",
                       }}
                       className="btn"
+ type="button"
+                      onClick={() => timeForLocal("02:30 PM")}
                     >
                       02:30 PM
                     </button>
@@ -294,6 +334,8 @@ const SearchResultsPage = () => {
                         border: "1px solid #2AA7FF",
                       }}
                       className="btn"
+ type="button"
+                      onClick={() => timeForLocal("06:00 PM")}
                     >
                       06:00 PM
                     </button>
@@ -303,6 +345,8 @@ const SearchResultsPage = () => {
                         border: "1px solid #2AA7FF",
                       }}
                       className="btn"
+ type="button"
+                      onClick={() => timeForLocal("06:30 PM")}
                     >
                       06:30 PM
                     </button>
@@ -312,6 +356,8 @@ const SearchResultsPage = () => {
                         border: "1px solid #2AA7FF",
                       }}
                       className="btn"
+ type="button"
+                      onClick={() => timeForLocal("07:00 PM")}
                     >
                       07:00 PM
                     </button>
@@ -321,12 +367,15 @@ const SearchResultsPage = () => {
                         border: "1px solid #2AA7FF",
                       }}
                       className="btn"
+ type="button"
+                      onClick={() => timeForLocal("07:30 PM")}
                     >
                       07:30 PM
                     </button>
                   </div>
                 </div>
-              </div>}
+                <button type="submit">Book</button>
+              </form>}
             </div>)}
             
             

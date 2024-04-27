@@ -126,12 +126,29 @@ background: linear-gradient(98deg, rgba(231,240,255,1) 0%, rgba(232,241,255,0.47
 
 .swiper-button-prev{
     padding-bottom: 3rem !important;
-    padding-left: 0.8rem !important;
+    padding-left: 0.2rem !important;
 }
 
 .swiper-button-next{
     padding-bottom: 3rem !important;
-    padding-right: 0.8rem !important;
+    padding-right: 0.2rem !important;
+}
+
+.sliderContainer {
+    margin-bottom: 1rem;
+}
+
+.sliderContainer:hover {
+    background-color: #2AA7FF;
+    cursor: pointer;
+}
+
+.sliderContainerActive {
+    background-color: #2AA7FF;
+}
+
+.swiper-slide:first-child {
+    margin-left: 70px !important;
 }
 
 

@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -20,7 +20,29 @@ import d3 from "../../assets/d3.svg";
 import d4 from "../../assets/d4.svg";
 import d5 from "../../assets/d5.svg";
 
-export default function Offercarousel({ from }) {
+export default function Offercarousel({ from, dateForLocal }) {
+
+
+  const [getActive, setActive] = useState('');
+
+  const [datesAccording, setDatesAccording] = useState([]);
+
+  
+
+  useEffect(() => {
+    if(from === "bookingDates"){
+      let dateArrLocal = localStorage.getItem('datesArr');
+      setDatesAccording(JSON.parse(dateArrLocal))
+    }
+  }, [])
+
+
+  const handleActive = (val) => {
+    dateForLocal(val)
+    setActive(val)
+  }
+
+  
   if (from === "specialist") {
     return (
       <>
@@ -210,36 +232,18 @@ export default function Offercarousel({ from }) {
             },
           }}
           modules={[Pagination, Scrollbar, Navigation]}
-          className="mySwiper"
+          className="mySwiperDate"
         >
-          <SwiperSlide className="mb-3" >
-            <h1 style={{fontSize: "16px", textAlign: "center"}}>Today</h1>
+          
+          
+          {datesAccording.map((date, ind) => 
+              <SwiperSlide key={date+ind}>
+            <div className={`sliderContainer w-50 ${getActive === date && 'sliderContainerActive'}`} onClick={() => handleActive(date)}>
+            <h1 style={{fontSize: "16px", textAlign: "center"}}>{`${ind == 0 ? "Today" : ind == 1 ? "Tomorrow" : date}`}</h1>
             <p style={{fontSize: "12px", color : "#01A400", textAlign: "center"}}>11 slots available</p>
+            </div>
           </SwiperSlide>
-          <SwiperSlide className="mb-3">
-            <h1 style={{fontSize: "16px", textAlign: "center"}}>Today</h1>
-            <p style={{fontSize: "12px", color : "#01A400", textAlign: "center"}}>11 slots available</p>
-          </SwiperSlide>
-          <SwiperSlide className="mb-3">
-            <h1 style={{fontSize: "16px", textAlign: "center"}}>Today</h1>
-            <p style={{fontSize: "12px", color : "#01A400", textAlign: "center"}}>11 slots available</p>
-          </SwiperSlide>
-          <SwiperSlide className="mb-3">
-            <h1 style={{fontSize: "16px", textAlign: "center"}}>Today</h1>
-            <p style={{fontSize: "12px", color : "#01A400", textAlign: "center"}}>11 slots available</p>
-          </SwiperSlide>
-          <SwiperSlide className="mb-3">
-            <h1 style={{fontSize: "16px", textAlign: "center"}}>Today</h1>
-            <p style={{fontSize: "12px", color : "#01A400", textAlign: "center"}}>11 slots available</p>
-          </SwiperSlide>
-          <SwiperSlide className="mb-3">
-            <h1 style={{fontSize: "16px", textAlign: "center"}}>Today</h1>
-            <p style={{fontSize: "12px", color : "#01A400", textAlign: "center"}}>11 slots available</p>
-          </SwiperSlide>
-          <SwiperSlide className="mb-3">
-            <h1 style={{fontSize: "16px", textAlign: "center"}}>Today</h1>
-            <p style={{fontSize: "12px", color : "#01A400", textAlign: "center"}}>11 slots available</p>
-          </SwiperSlide>
+            )}
           
         </Swiper>
     );
