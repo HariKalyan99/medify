@@ -13,7 +13,8 @@ import ad from "../assets/ad.svg";
 import Offercarousel from "../components/Offercarousel/Offercarousel";
 
 const SearchResultsPage = () => {
-  const { getHealthCenter } = useContext(healthCenterStore);
+  const { getHealthCenter, invoke, getLocalData, captureBooks } =
+    useContext(healthCenterStore);
 
   const [bookingOpen, setBookingOpen] = useState(false);
 
@@ -23,14 +24,12 @@ const SearchResultsPage = () => {
 
   const [geTimeLocal, setTimeLocal] = useState("");
 
-  const [bookingSlots, setBookingSlots] = useState([]);
+  // const [bookingSlots, setBookingSlots] = useState([]);
 
   const timeForLocal = (val) => {
-    setTimeLocal(val)
-    
+    setTimeLocal(val);
   };
   const dateForLocal = (val) => {
-    
     setDateLocal(val);
   };
 
@@ -41,14 +40,17 @@ const SearchResultsPage = () => {
       date: getDateLocal,
       center,
     };
-    setBookingSlots([booking, ...bookingSlots]);
+    captureBooks(booking);
+    // setBookingSlots([booking, ...bookingSlots]); invoke
     setBookingOpen(!bookingOpen);
     setTimeLocal("");
   };
 
-  useEffect(() => {
-    localStorage.setItem("bookingSlot", JSON.stringify(bookingSlots));
-  }, [bookingSlots]);
+  // useEffect(() => {
+  //   console.log(getLocalData)
+  //       localStorage.setItem("bookingSlot", JSON.stringify(bookingSlots));
+  //       invoke();
+  // }, [bookingSlots]);
 
   useEffect(() => {
     setHospitalId(hospitalId);
@@ -198,7 +200,7 @@ const SearchResultsPage = () => {
                             setBookingOpen(false);
                             setHospitalId("");
                             setTimeLocal("");
-                            setDateLocal("")
+                            setDateLocal("");
                           }}
                         >
                           Cancel booking
@@ -295,7 +297,9 @@ const SearchResultsPage = () => {
                             style={{
                               border: "1px solid #2AA7FF",
                             }}
-                            className={`btn timeBtn ${geTimeLocal === "11:30 AM" && 'timeBtnActive'}`}
+                            className={`btn timeBtn ${
+                              geTimeLocal === "11:30 AM" && "timeBtnActive"
+                            }`}
                             type="button"
                             onClick={() => timeForLocal("11:30 AM")}
                           >
@@ -316,7 +320,9 @@ const SearchResultsPage = () => {
                             style={{
                               border: "1px solid #2AA7FF",
                             }}
-                            className={`btn timeBtn ${geTimeLocal === "12:00 PM" && 'timeBtnActive'}`}
+                            className={`btn timeBtn ${
+                              geTimeLocal === "12:00 PM" && "timeBtnActive"
+                            }`}
                             type="button"
                             onClick={() => timeForLocal("12:00 PM")}
                           >
@@ -326,7 +332,9 @@ const SearchResultsPage = () => {
                             style={{
                               border: "1px solid #2AA7FF",
                             }}
-                            className={`btn timeBtn ${geTimeLocal === "12:30 PM" && 'timeBtnActive'}`}
+                            className={`btn timeBtn ${
+                              geTimeLocal === "12:30 PM" && "timeBtnActive"
+                            }`}
                             type="button"
                             onClick={() => timeForLocal("12:30 PM")}
                           >
@@ -336,7 +344,9 @@ const SearchResultsPage = () => {
                             style={{
                               border: "1px solid #2AA7FF",
                             }}
-                            className={`btn timeBtn ${geTimeLocal === "01:00 PM" && 'timeBtnActive'}`}
+                            className={`btn timeBtn ${
+                              geTimeLocal === "01:00 PM" && "timeBtnActive"
+                            }`}
                             type="button"
                             onClick={() => timeForLocal("01:00 PM")}
                           >
@@ -346,7 +356,9 @@ const SearchResultsPage = () => {
                             style={{
                               border: "1px solid #2AA7FF",
                             }}
-                            className={`btn timeBtn ${geTimeLocal === "02:00 PM" && 'timeBtnActive'}`}
+                            className={`btn timeBtn ${
+                              geTimeLocal === "02:00 PM" && "timeBtnActive"
+                            }`}
                             type="button"
                             onClick={() => timeForLocal("02:00 PM")}
                           >
@@ -356,7 +368,9 @@ const SearchResultsPage = () => {
                             style={{
                               border: "1px solid #2AA7FF",
                             }}
-                            className={`btn timeBtn ${geTimeLocal === "02:30 PM" && 'timeBtnActive'}`}
+                            className={`btn timeBtn ${
+                              geTimeLocal === "02:30 PM" && "timeBtnActive"
+                            }`}
                             type="button"
                             onClick={() => timeForLocal("02:30 PM")}
                           >
@@ -374,7 +388,9 @@ const SearchResultsPage = () => {
                             style={{
                               border: "1px solid #2AA7FF",
                             }}
-                            className={`btn timeBtn ${geTimeLocal === "06:00 PM" && 'timeBtnActive'}`}
+                            className={`btn timeBtn ${
+                              geTimeLocal === "06:00 PM" && "timeBtnActive"
+                            }`}
                             type="button"
                             onClick={() => timeForLocal("06:00 PM")}
                           >
@@ -384,7 +400,9 @@ const SearchResultsPage = () => {
                             style={{
                               border: "1px solid #2AA7FF",
                             }}
-                            className={`btn timeBtn ${geTimeLocal === "06:30 PM" && 'timeBtnActive'}`}
+                            className={`btn timeBtn ${
+                              geTimeLocal === "06:30 PM" && "timeBtnActive"
+                            }`}
                             type="button"
                             onClick={() => timeForLocal("06:30 PM")}
                           >
@@ -394,7 +412,9 @@ const SearchResultsPage = () => {
                             style={{
                               border: "1px solid #2AA7FF",
                             }}
-                            className={`btn timeBtn ${geTimeLocal === "07:00 PM" && 'timeBtnActive'}`}
+                            className={`btn timeBtn ${
+                              geTimeLocal === "07:00 PM" && "timeBtnActive"
+                            }`}
                             type="button"
                             onClick={() => timeForLocal("07:00 PM")}
                           >
@@ -404,7 +424,9 @@ const SearchResultsPage = () => {
                             style={{
                               border: "1px solid #2AA7FF",
                             }}
-                            className={`btn timeBtn ${geTimeLocal === "07:30 PM" && 'timeBtnActive'}`}
+                            className={`btn timeBtn ${
+                              geTimeLocal === "07:30 PM" && "timeBtnActive"
+                            }`}
                             type="button"
                             onClick={() => timeForLocal("07:30 PM")}
                           >
@@ -413,14 +435,64 @@ const SearchResultsPage = () => {
                         </div>
                       </div>
                       <div className="d-flex justify-content-center">
-                      <button
+                        <button
                           type="submit"
                           className="btn text-light px-5"
                           style={{ backgroundColor: "#2AA8FF" }}
                           disabled={getDateLocal && geTimeLocal ? false : true}
+                          data-bs-toggle="modal"
+                          data-bs-target="#exampleModal"
                         >
                           Book
                         </button>
+                      </div>
+                      <div
+                        class="modal fade"
+                        id="exampleModal"
+                        tabindex="-1"
+                        aria-labelledby="exampleModalLabel"
+                        aria-hidden="true"
+                      >
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1
+                                class="modal-title fs-5"
+                                id="exampleModalLabel"
+                              >
+                                Booked {center["Hospital Name"]}!
+                              </h1>
+                              <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                              ></button>
+                            </div>
+                            <div class="modal-body">
+                              Your free appointment is booked on {getDateLocal}{" "}
+                              @ {geTimeLocal}
+                              <p>
+                                Note:{" "}
+                                <small style={{ color: "#2AA8FF" }}>
+                                  {" "}
+                                  make sure you are 10 minutes early and take
+                                  precautionary measures before coming to the
+                                  venue
+                                </small>
+                              </p>
+                            </div>
+                            <div class="modal-footer">
+                              <button
+                                type="button"
+                                class="btn btn-secondary"
+                                data-bs-dismiss="modal"
+                              >
+                                Close
+                              </button>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </form>
                   )}

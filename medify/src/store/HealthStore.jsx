@@ -10,6 +10,9 @@ export const healthCenterStore = createContext({
   handleInputState: () => {},
   handleInputCity: () => {},
   searchForCenters: () => {},
+  getLocalData: [],
+  invoke: () => {},
+  captureBooks: () => {}
 });
 
 const HealthCenterContextProvider = ({ children }) => {
@@ -25,9 +28,11 @@ const HealthCenterContextProvider = ({ children }) => {
 
   const [getSearchResults, setSearchResults] = useState("");
 
-  const [invokerFn, setInvokerFn] = useState("invoke");
+  const [invokerFn, setInvokerFn] = useState(true);
 
   const navigate = useNavigate();
+
+  const [getLocalData, setLocalData] = useState([]);
 
   
 
@@ -57,9 +62,15 @@ const HealthCenterContextProvider = ({ children }) => {
       }
     };
 
-        if(invokerFn === "invoke"){
+    let dataLocal = JSON.parse(localStorage.getItem('bookingSlot'));
+    if(dataLocal){
+      setLocalData([...dataLocal])
+    }else{
+      localStorage.setItem('bookingSlot', JSON.stringify([]));
+    }
+   
+
           fetchStates();
-        }
 
         let today = new Date().toDateString().toString().split(" ").splice(1).join(" ");
         let dateArr = [today];
@@ -104,7 +115,7 @@ const HealthCenterContextProvider = ({ children }) => {
         setInputCity("");
         setInputHealth("");
         setSearchResults("");
-        setInvokerFn("invoke")
+        invoke()
       } catch (error) {
         console.log("Error", error);
       }
@@ -124,10 +135,20 @@ const HealthCenterContextProvider = ({ children }) => {
   };
 
 
+  const invoke = () => {
+    setInvokerFn(!invokerFn);
+  }
+
+
   const searchForCenters = (value) => {
     setSearchResults(value)
   }
 
+  const captureBooks = (slot) => {
+    let bookingDataFromLocal = JSON.parse(localStorage.getItem('bookingSlot'));
+    localStorage.setItem('bookingSlot', JSON.stringify([slot, ...bookingDataFromLocal]));
+    invoke();
+  }
 
   return (
     <healthCenterStore.Provider
@@ -136,7 +157,7 @@ const HealthCenterContextProvider = ({ children }) => {
         stateList,
         cityList,
         handleInputState,
-        handleInputCity,searchForCenters
+        handleInputCity,searchForCenters,getLocalData, invoke, captureBooks
       }}
     >
       {children}

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import NavigationBar from '../components/HosptalNavigationBar/NavigationBar';
 import SearchHospitals from '../components/HospitalSearchBar/SearchHospitals';
@@ -8,17 +8,17 @@ import Banner from '../components/banner/Banner';
 import ad from "../assets/ad.svg";
 import bookHos from "../assets/bookHos.svg";
 import like from "../assets/like.svg";
+import { healthCenterStore } from '../store/HealthStore';
 
 const MyBookingsPage = () => {
 
     const [dataFromLocal, setDataFromLocal] = useState([]);
 
+    const {getLocalData} = useContext(healthCenterStore);
+
     useEffect(() => {
-        let dataLocal = JSON.parse(localStorage.getItem('bookingSlot'));
-        if(dataLocal.length > 0){
-            setDataFromLocal(dataLocal);
+      setDataFromLocal(getLocalData);
             //make a booking list array as a common producer using the context api..
-        }
     } , [])
 
     // const navigate = useNavigate(); 
