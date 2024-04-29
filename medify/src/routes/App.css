@@ -95,6 +95,9 @@ background: linear-gradient(98deg, rgba(231,240,255,1) 0%, rgba(232,241,255,0.47
     height: 124px;
     width: 100%;
     background-color: #2AA7FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .healthCenters{

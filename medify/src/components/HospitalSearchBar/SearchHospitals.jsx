@@ -6,6 +6,7 @@ import Capsule from "../../assets/Capsule.svg";
 import doctors from "../../assets/doctors.svg";
 import labs from "../../assets/labs.svg";
 import hospitals from "../../assets/hospitals.svg";
+import { CiLocationOn } from "react-icons/ci";
 
 const SearchHospitals = ({ from }) => {
   const {
@@ -24,37 +25,51 @@ const SearchHospitals = ({ from }) => {
   if (from === "searchPage") {
     return (
       <div className="container d-flex flex-column justify-content-center align-items-center position-relative z-2 top-50" style={{backgroundColor: "white", borderRadius: "1rem", boxShadow: "1px 10px 1rem #e0e2e7"}}>
-        <form  className="d-flex w-75 justify-content-between mt-4 mb-4 align-items-center">
-          <div>
+        <form  className="d-flex w-100 justify-content-between mt-4 mb-4 align-items-center gap-3">
+          <div className="d-flex" style={{border:"1px solid #F0F0F0", borderRadius: "10px"}}>
+            <button  style={{
+                backgroundColor: "#FAFBFE",
+                width: "40px",
+                border: "none",
+                borderRadius: "10px"
+              }}><CiLocationOn /></button>
             <input
               className="form-control"
               list="datalistOptions"
               id="exampleDataList"
-              placeholder="Type to search..."
+              placeholder="State"
               
               style={{
                 backgroundColor: "#FAFBFE",
                 width: "285px",
                 height: "50px",
+                border: 'none',
+                borderRadius: "10px",
               }}
-              required
             />
             <datalist id="datalistOptions">
                 <option  />
             </datalist>
           </div>
 
-          <div>
+          <div className="d-flex flex-grow-1" style={{border:"1px solid #F0F0F0", borderRadius: "10px"}}>
+          <button  style={{
+                backgroundColor: "#FAFBFE",
+                width: "40px",
+                border: "none",
+                borderRadius: "10px",
+              }}><CiLocationOn /></button>
             <input
               className="form-control"
               list="datalistOptions2"
               id="exampleDataList2"
-              placeholder="Type to search..."
+              placeholder="City"
               
               style={{
                 backgroundColor: "#FAFBFE",
-                width: "285px",
                 height: "50px",
+                border: 'none',
+                borderRadius: "10px"
               }}
             />
             <datalist id="datalistOptions2">
@@ -73,16 +88,53 @@ const SearchHospitals = ({ from }) => {
 
       </div>
     );
-  } else {
+  } else if (from === "bookingPage"){
+    return (
+      <div className="container d-flex flex-column justify-content-center align-items-center position-relative z-2 top-50" style={{backgroundColor: "white", borderRadius: "1rem", boxShadow: "1px 10px 1rem #e0e2e7"}}>
+        <form  className="d-flex w-100 justify-content-between mt-4 mb-4 align-items-center gap-3">
+          
+
+          <div className="d-flex flex-grow-1" style={{border:"1px solid #F0F0F0", borderRadius: "10px"}}>
+            <input
+              className="form-control"
+              list="datalistOptions2"
+              id="exampleDataList2"
+              placeholder="Search By Hospital"
+              
+              style={{
+                backgroundColor: "#FAFBFE",
+                height: "50px",
+                border: 'none',
+                borderRadius: "10px"
+              }}
+            />
+            <datalist id="datalistOptions2">
+                <option />
+            </datalist>
+          </div>
+
+          <button
+            type="button" 
+            className="btn text-light px-5"
+            style={{ backgroundColor: "#2AA8FF" }}
+          >
+            <IoIosSearch size={30} /> Search
+          </button>
+        </form>
+
+      </div>
+    );
+  }else {
     return (
       <div className="container d-flex flex-column justify-content-center align-items-center">
         <form onSubmit={(e) => handleSubmit(e)} className="d-flex w-75 justify-content-between mt-5">
           <div>
+            
             <input
               className="form-control"
               list="datalistOptions"
               id="exampleDataList"
-              placeholder="Type to search..."
+              placeholder="State"
               onChange={(e) => handleInputState(e.target.value)}
               style={{
                 backgroundColor: "#FAFBFE",
@@ -103,7 +155,7 @@ const SearchHospitals = ({ from }) => {
               className="form-control"
               list="datalistOptions2"
               id="exampleDataList2"
-              placeholder="Type to search..."
+              placeholder="City"
               onChange={(e) => handleInputCity(e.target.value)}
               style={{
                 backgroundColor: "#FAFBFE",

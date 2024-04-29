@@ -13,7 +13,7 @@ import ad from "../assets/ad.svg";
 import Offercarousel from "../components/Offercarousel/Offercarousel";
 
 const SearchResultsPage = () => {
-  const { getHealthCenter, invoke, getLocalData, captureBooks } =
+  const { getHealthCenter, captureBooks } =
     useContext(healthCenterStore);
 
   const [bookingOpen, setBookingOpen] = useState(false);
@@ -24,7 +24,7 @@ const SearchResultsPage = () => {
 
   const [geTimeLocal, setTimeLocal] = useState("");
 
-  // const [bookingSlots, setBookingSlots] = useState([]);
+
 
   const timeForLocal = (val) => {
     setTimeLocal(val);
@@ -41,16 +41,12 @@ const SearchResultsPage = () => {
       center,
     };
     captureBooks(booking);
-    // setBookingSlots([booking, ...bookingSlots]); invoke
+   
     setBookingOpen(!bookingOpen);
     setTimeLocal("");
   };
 
-  // useEffect(() => {
-  //   console.log(getLocalData)
-  //       localStorage.setItem("bookingSlot", JSON.stringify(bookingSlots));
-  //       invoke();
-  // }, [bookingSlots]);
+  
 
   useEffect(() => {
     setHospitalId(hospitalId);
@@ -58,16 +54,7 @@ const SearchResultsPage = () => {
 
   return (
     <div>
-      {/* <h1>SearchResultsPage</h1>
-<br />
-        <h1>My Bookings</h1>
-        <Link to={"/bookings"}>
-            <button>Bookings</button>
-        </Link>
-
-        <div>
-            <SearchHospitals from={"searchPage"}/>
-        </div> */}
+   
 
       <Banner />
       <NavigationBar becomeActive={"findDoctors"} />
@@ -77,7 +64,6 @@ const SearchResultsPage = () => {
       </div>
 
       <div className="container-fluid healthCenters">
-        {/* healthcenters to be populated  */}
         <div
           className="container d-flex flex-column justify-content-center"
           style={{ paddingTop: "150px" }}

@@ -63,6 +63,10 @@ export default function Offercarousel({ from, dateForLocal }) {
               spaceBetween: 40,
             },
             1024: {
+              slidesPerView: 3,
+              spaceBetween: 100,
+            },
+            1280: {
               slidesPerView: 4.5,
               spaceBetween: 50,
             },
@@ -263,10 +267,14 @@ export default function Offercarousel({ from, dateForLocal }) {
               spaceBetween: 20,
             },
             768: {
-              slidesPerView: 1,
-              spaceBetween: 40,
+              slidesPerView: 2,
+              spaceBetween: 150,
             },
             1024: {
+              slidesPerView: 3,
+              spaceBetween: 250,
+            },
+            1200: {
               slidesPerView: 3,
               spaceBetween: 50,
             },

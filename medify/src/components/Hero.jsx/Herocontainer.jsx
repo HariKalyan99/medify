@@ -4,7 +4,7 @@ const Herocontainer = () => {
   return (
     <div className='container d-flex w-100 justify-content-center align-items-start'>
           <div className=' h-100 w-50' style={{marginTop: "120px"}}>
-            <h1 style={{fontSize: "31px"}}>Skip the travel! Find Online</h1>
+            <h1 style={{fontSize: "31px"}} className='fs-5 fs-lg-1'>Skip the travel! Find Online</h1>
             <h1 className='fw-bold' style={{fontSize: "56px"}}>Medical <span style={{color: "#2AA7FF"}}>Centers</span></h1>
             <p>
             Connect instantly with a 24x7 specialist or choose to video visit a particular doctor.
