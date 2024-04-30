@@ -185,7 +185,7 @@ const SearchResultsPage = () => {
                             setDateLocal("");
                           }}
                         >
-                          Cancel booking
+                          <span className="fsize">Cancel booking</span>
                         </button>
                        </div>
                       ) : (
@@ -199,7 +199,7 @@ const SearchResultsPage = () => {
                             setHospitalId(center["Provider ID"]);
                           }}
                         >
-                          Book FREE Center Visit
+                          <span className="fsize">Book FREE Center Visit</span>
                         </button>
                         </div>
                       )}
@@ -230,7 +230,7 @@ const SearchResultsPage = () => {
                           height: "402px",
                         }}
                       >
-                        <div className="d-flex justify-content-center align-items-center position-relative">
+                        <div className="d-flex justify-content-center align-items-center position-relative arrowBack">
                           <div
                             style={{
                               height: "60px",
@@ -238,7 +238,6 @@ const SearchResultsPage = () => {
                               borderRadius: "50%",
                               border: "1px solid #E8E8F0",
                               left: "39px",
-                              top: "12px",
                               backgroundColor: "white",
                             }}
                             className="position-absolute"
@@ -262,45 +261,47 @@ const SearchResultsPage = () => {
                               borderRadius: "50%",
                               border: "1px solid #E8E8F0",
                               right: "39px",
-                              top: "12px",
                               backgroundColor: "white",
                             }}
                             className="position-absolute"
                           ></div>
                         </div>
                         <div
-                          className="w-100 h-25 d-flex gap-5 justify-content-start align-items-center"
+                          className="w-100 h-25 d-flex gap-lg-5 gap-md-2 justify-content-start align-items-center dateTimeContainer"
                           style={{ borderBottom: "1px solid #E8E8F0" }}
                         >
                           <p
-                            className="pt-3"
+                            className="pt-3 px-md-5 mor "
                             style={{ fontSize: "14px", paddingLeft: "50px" }}
                           >
                             Morning
                           </p>
+                          <div className="w-100 d-flex btnDiv">
                           <button
                             style={{
                               border: "1px solid #2AA7FF",
                             }}
-                            className={`btn timeBtn ${
+                            className={`btn timeBtn mx-md-3 ${
                               geTimeLocal === "11:30 AM" && "timeBtnActive"
                             }`}
                             type="button"
                             onClick={() => timeForLocal("11:30 AM")}
                           >
-                            11:30 AM
+                            <span className="timeSize">11:30 AM</span>
                           </button>
+                          </div>
                         </div>
                         <div
-                          className="w-100 h-25 d-flex gap-5 justify-content-start align-items-center"
+                          className="w-100 h-25 d-flex gap-lg-5 gap-md-2 justify-content-start align-items-center  dateTimeContainer"
                           style={{ borderBottom: "1px solid #E8E8F0" }}
                         >
                           <p
-                            className="pt-3"
+                            className="pt-3 px-md-5 aft "
                             style={{ fontSize: "14px", paddingLeft: "40px" }}
                           >
                             Afternoon
                           </p>
+                          <div className="w-100 d-flex btnDiv">
                           <button
                             style={{
                               border: "1px solid #2AA7FF",
@@ -311,7 +312,7 @@ const SearchResultsPage = () => {
                             type="button"
                             onClick={() => timeForLocal("12:00 PM")}
                           >
-                            12:00 PM
+                            <span className="timeSize">12:00 PM</span>
                           </button>
                           <button
                             style={{
@@ -323,7 +324,7 @@ const SearchResultsPage = () => {
                             type="button"
                             onClick={() => timeForLocal("12:30 PM")}
                           >
-                            12:30 PM
+                            <span className="timeSize">12:30 PM</span>
                           </button>
                           <button
                             style={{
@@ -335,7 +336,7 @@ const SearchResultsPage = () => {
                             type="button"
                             onClick={() => timeForLocal("01:00 PM")}
                           >
-                            01:00 PM
+                            <span className="timeSize">01:00 PM</span>
                           </button>
                           <button
                             style={{
@@ -347,7 +348,7 @@ const SearchResultsPage = () => {
                             type="button"
                             onClick={() => timeForLocal("02:00 PM")}
                           >
-                            02:00 PM
+                            <span className="timeSize">02:00 PM</span>
                           </button>
                           <button
                             style={{
@@ -359,27 +360,29 @@ const SearchResultsPage = () => {
                             type="button"
                             onClick={() => timeForLocal("02:30 PM")}
                           >
-                            02:30 PM
+                            <span className="timeSize">02:30 PM</span>
                           </button>
+                          </div>
                         </div>
-                        <div className="w-100 h-25 d-flex gap-5 justify-content-start align-items-center">
+                        <div className="w-100 h-25 d-flex gap-lg-5 gap-md-2 justify-content-start align-items-center dateTimeContainer">
                           <p
-                            className="pt-3"
+                            className="pt-3 px-md-5 eve mx-md-2"
                             style={{ fontSize: "14px", paddingLeft: "50px" }}
                           >
                             Evening
                           </p>
+                          <div className="w-100 d-flex btnDiv">
                           <button
                             style={{
                               border: "1px solid #2AA7FF",
                             }}
-                            className={`btn timeBtn ${
+                            className={`btn timeBtn  ${
                               geTimeLocal === "06:00 PM" && "timeBtnActive"
                             }`}
                             type="button"
                             onClick={() => timeForLocal("06:00 PM")}
                           >
-                            06:00 PM
+                            <span className="timeSize">06:00 PM</span>
                           </button>
                           <button
                             style={{
@@ -391,7 +394,7 @@ const SearchResultsPage = () => {
                             type="button"
                             onClick={() => timeForLocal("06:30 PM")}
                           >
-                            06:30 PM
+                            <span className="timeSize">06:30 PM</span>
                           </button>
                           <button
                             style={{
@@ -403,7 +406,7 @@ const SearchResultsPage = () => {
                             type="button"
                             onClick={() => timeForLocal("07:00 PM")}
                           >
-                            07:00 PM
+                            <span className="timeSize">07:00 PM</span>
                           </button>
                           <button
                             style={{
@@ -415,8 +418,9 @@ const SearchResultsPage = () => {
                             type="button"
                             onClick={() => timeForLocal("07:30 PM")}
                           >
-                            07:30 PM
+                            <span className="timeSize">07:30 PM</span>
                           </button>
+                          </div>
                         </div>
                       </div>
                       <div className="d-flex justify-content-center">

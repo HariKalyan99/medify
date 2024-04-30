@@ -263,6 +263,27 @@ background: linear-gradient(98deg, rgba(231,240,255,1) 0%, rgba(232,241,255,0.47
     font-size: 20px;
 }
 
+.arrowBack {
+    top: 12px;
+}
+
+.dateTextH1 {
+    font-size: 16px;
+}
+
+.dateTextp{
+    font-size: 12px;
+
+}
+
+.subHealthCenter {
+    width: 70% !important;
+}
+
+.subList1{
+    width: 30%;
+}
+
 
 
 @media (max-width: 992px) {
@@ -280,6 +301,10 @@ background: linear-gradient(98deg, rgba(231,240,255,1) 0%, rgba(232,241,255,0.47
         width: 100%;
         
     }
+    .btnDiv {
+        gap: 100px;
+
+    }
 }
 
 @media (min-width: 1440px) and (max-width: 2560px){
@@ -290,6 +315,10 @@ background: linear-gradient(98deg, rgba(231,240,255,1) 0%, rgba(232,241,255,0.47
     .mainBook2 {
         width: 100%;
         
+    }
+    .btnDiv {
+        gap: 100px;
+
     }
 }
 
@@ -317,6 +346,10 @@ background: linear-gradient(98deg, rgba(231,240,255,1) 0%, rgba(232,241,255,0.47
     .hospitalNameText {
         font-size: 15px;
     }
+    .btnDiv {
+        gap: 50px;
+    }
+  
 }
 
 @media (max-width: 768px) {
@@ -374,8 +407,41 @@ background: linear-gradient(98deg, rgba(231,240,255,1) 0%, rgba(232,241,255,0.47
     .playBtn {
         width: 274px;
     }
+    .dateTextH1 {
+        font-size: 14px;
+    }
     
+    .dateTextp{
+        font-size: 10px;
     
+    }
+    .fsize {
+        font-size: 0.8rem;
+    }
+    .btnDiv {
+        gap: 10px;
+    }
+
+    .navigationLink:hover {
+        color: #2AA7FF !important;
+    }
+    
+    .doctorsActive {
+        color: #2AA7FF !important;
+    }
+    .healthCenters2 {
+    display: flex;
+    flex-direction: column;
+    }
+    .subHealthCenter {
+        width: 100% !important;
+    }
+    .slotText {
+        font-size: 0.8rem;
+    }
+    .advert {
+        height: 100%;
+    }
 
 }
 
@@ -498,5 +564,72 @@ background: linear-gradient(98deg, rgba(231,240,255,1) 0%, rgba(232,241,255,0.47
         align-items: center;
         width: 100% !important;
     }
+    .timeSize {
+        font-size: 0.5rem;
+    }
+
+    .dateTimeContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .eve {
+        padding-right: 60px;
+    }
+
+    .aft {
+        padding-right: 54px;
+    }
+
+    .mor {
+        padding-right: 60px;
+    }
+    .btnDiv {
+        justify-content: space-around;
+
+    }
+    .bannerText {
+        font-size: 0.6rem;
+    }
+    .navigationLink:hover {
+        color: #2AA7FF;
+    }
     
+    .doctorsActive {
+        color: #2AA7FF ;
+    }
+    .healthCenters2 {
+        display: flex;
+        flex-direction: column;
+        }
+        .subHealthCenter {
+            width: 100%;
+        }
+        .bookingLists {
+            height: 100%;
+        }
+        .listSlots {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 100px;
+        }
+        .subList {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100% !important;
+        }
+        .subList1{
+            width: 100%;
+            padding-left: 50px;
+        }
+        .advert {
+            height: 100%;
+        }
+
+
 }

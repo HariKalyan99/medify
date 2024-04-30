@@ -230,12 +230,20 @@ export default function Offercarousel({ from, dateForLocal }) {
           navigation={true}
           scrollbar={true}
           breakpoints={{
+            375: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            425: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
             640: {
               slidesPerView: 1,
               spaceBetween: 20,
             },
             768: {
-              slidesPerView: 1,
+              slidesPerView: 3,
               spaceBetween: 30,
             },
             1024: {
@@ -251,8 +259,8 @@ export default function Offercarousel({ from, dateForLocal }) {
           {datesAccording.map((date, ind) => 
               <SwiperSlide key={date+ind}>
             <div className={`sliderContainer w-50 ${getActive === date && 'sliderContainerActive'}`} onClick={() => handleActive(date)}>
-            <h1 style={{fontSize: "16px", textAlign: "center"}}>{`${ind == 0 ? "Today" : ind == 1 ? "Tomorrow" : date}`}</h1>
-            <p style={{fontSize: "12px", color : "#01A400", textAlign: "center"}}>11 slots available</p>
+            <h1 className="dateTextH1" style={{ textAlign: "center"}}>{`${ind == 0 ? "Today" : ind == 1 ? "Tomorrow" : date}`}</h1>
+            <p className="dateTextp" style={{ color : "#01A400", textAlign: "center"}}>11 slots available</p>
             </div>
           </SwiperSlide>
             )}

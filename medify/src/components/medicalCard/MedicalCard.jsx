@@ -5,15 +5,15 @@ import like from "../../assets/like.svg";
 const MedicalCard = ({center}) => {
   return (
     <div  className="bookingLists">
-                <div className="container d-flex justify-content-center align-items-center p-3">
+                <div className="container d-flex justify-items-center align-items-center p-3 listSlots">
                   <div
                     style={{ width: "25%", height: "100%" }}
-                    className="d-flex justify-content-start px-4"
+                    className="d-flex justify-content-start px-lg-4 subList"
                   >
                     <img src={bookHos} alt="healthCenter_logo" />
                   </div>
                   <div
-                    className="d-flex flex-column justify-content-center"
+                    className="d-flex flex-column justify-content-center subList"
                     style={{ width: "45%", height: "100%" }}
                   >
                     <h1 style={{ fontSize: "20px" }}>
@@ -59,11 +59,11 @@ const MedicalCard = ({center}) => {
                     </span>
                   </div>
                   <div
-                    className="d-flex justify-content-start align-items-start gap-5 pt-5"
-                    style={{ width: "30%", height: "269px" }}
+                    className="d-flex justify-content-start align-items-start gap-5 pt-5 subList1"
+                    style={{ height: "269px" }}
                   >
                     <div
-                      className="pt-1"
+                      className="pt-1 "
                       style={{
                         width: "84px",
                         height: "31px",
@@ -71,10 +71,10 @@ const MedicalCard = ({center}) => {
                         borderRadius: "5px",
                       }}
                     >
-                      <p className="text-center">{center.time}</p>
+                      <p className="text-center slotText">{center.time}</p>
                     </div>
                     <div
-                      className="pt-1"
+                      className="pt-1 "
                       style={{
                         width: "128px",
                         height: "31px",
@@ -82,7 +82,7 @@ const MedicalCard = ({center}) => {
                         borderRadius: "5px",
                       }}
                     >
-                      <p className="text-center">{center.date}</p>
+                      <p className="text-center slotText">{center.date}</p>
                     </div>
                   </div>
                 </div>

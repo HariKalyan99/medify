@@ -40,15 +40,15 @@ const MyBookingsPage = () => {
 
       <div className="container-fluid healthCenters">
         <div
-          className="container d-flex justify-content-center gap-3 pt-5"
+          className="container d-flex justify-content-center gap-3 pt-5 healthCenters2"
           style={{ paddingBottom: "100px" }}
         >
-          <div className="w-75 d-flex flex-column gap-5 pt-5 pb-5">
+          <div className="d-flex flex-column gap-5 pt-5 pb-5 subHealthCenter">
             {dataFromLocal.map((center, ind) => (
               <MedicalCard key={center.center["Provider ID"]} center={center} />
             ))}
           </div>
-          <div className="w-25 bookingLists mt-5">
+          <div className="w-25 bookingLists mt-5 advert">
             <img
               src={ad}
               alt="ads"
