@@ -13,8 +13,7 @@ import ad from "../assets/ad.svg";
 import Offercarousel from "../components/Offercarousel/Offercarousel";
 
 const SearchResultsPage = () => {
-  const { getHealthCenter, captureBooks } =
-    useContext(healthCenterStore);
+  const { getHealthCenter, captureBooks } = useContext(healthCenterStore);
 
   const [bookingOpen, setBookingOpen] = useState(false);
 
@@ -23,8 +22,6 @@ const SearchResultsPage = () => {
   const [getDateLocal, setDateLocal] = useState("");
 
   const [geTimeLocal, setTimeLocal] = useState("");
-
-
 
   const timeForLocal = (val) => {
     setTimeLocal(val);
@@ -41,12 +38,10 @@ const SearchResultsPage = () => {
       center,
     };
     captureBooks(booking);
-   
+
     setBookingOpen(!bookingOpen);
     setTimeLocal("");
   };
-
-  
 
   useEffect(() => {
     setHospitalId(hospitalId);
@@ -54,8 +49,6 @@ const SearchResultsPage = () => {
 
   return (
     <div>
-   
-
       <Banner />
       <NavigationBar becomeActive={"findDoctors"} />
 
@@ -86,15 +79,15 @@ const SearchResultsPage = () => {
           </div>
         </div>
 
-        <div className="d-flex container justify-content-center gap-3">
+        <div className={`d-flex container justify-content-center gap-3 position-relative ${!getHealthCenter.length < 1 && 'mainBook'}`}>
           <div
-            className="d-flex flex-column w-75 justify-content-start mt-3 align-items-start gap-4"
+            className={`d-flex flex-column justify-content-start mt-3 align-items-start gap-4 ${!getHealthCenter.length < 1 && 'mainBook2'}`}
             style={{ paddingBottom: "100px" }}
           >
             {getHealthCenter.length < 1 ? (
               <div className="bookContainer w-100 h-100 d-flex flex-column pb-5 pt-2">
-                <div className="w-100 d-flex justify-content-center align-items-center">
-                  <div className="px-5" style={{ height: "100%" }}>
+                <div className="w-100 d-flex justify-content-center align-items-center bookContainer1 px-5">
+                  <div className="px-2" style={{ height: "100%" }}>
                     <img src={bookHos} alt="healthCenter_logo" />
                   </div>
                   <div className="d-flex flex-column justify-content-center align-items-center pt-4">
@@ -108,20 +101,20 @@ const SearchResultsPage = () => {
               getHealthCenter.map((center, ind) => (
                 <div
                   key={center["Provider ID"]}
-                  className="bookContainer w-100 h-100 d-flex flex-column pb-5 pt-2"
+                  className="bookContainer w-100 h-100 d-flex flex-column pb-5 pt-2 "
                 >
-                  <div className="w-100 d-flex">
+                  <div className="w-100 d-flex bookContainer1">
                     <div
-                      className="px-5"
+                      className="px-lg-5 subBookContainer"
                       style={{ width: "25%", height: "100%" }}
                     >
                       <img src={bookHos} alt="healthCenter_logo" />
                     </div>
                     <div
-                      className="d-flex flex-column justify-content-center pt-4"
+                      className="d-flex flex-column justify-content-center pt-4 subBookContainer"
                       style={{ width: "45%", height: "100%" }}
                     >
-                      <h1 style={{ fontSize: "20px" }}>
+                      <h1 className="hospitalNameText" >
                         {center["Hospital Name"]}
                       </h1>
                       <p className="fw-bold" style={{ fontSize: "14px" }}>
@@ -165,9 +158,10 @@ const SearchResultsPage = () => {
                     </div>
 
                     <div
-                      className="d-flex flex-column justify-content-end align-content-center px-2 pb-4"
-                      style={{ width: "30%", height: "100%" }}
+                      className="d-flex flex-column justify-content-end align-items-center px-2 pb-4 subBookContainer"
+                      style={{ width: "30%" }}
                     >
+                      <div>
                       <p
                         style={{
                           color: "#02A401",
@@ -177,8 +171,10 @@ const SearchResultsPage = () => {
                       >
                         Available Today
                       </p>
+                      </div>
                       {bookingOpen && center["Provider ID"] === hospitalId ? (
-                        <button
+                       <div>
+                         <button
                           type="button"
                           className="btn text-light px-5"
                           style={{ backgroundColor: "#2AA8FF" }}
@@ -191,8 +187,10 @@ const SearchResultsPage = () => {
                         >
                           Cancel booking
                         </button>
+                       </div>
                       ) : (
-                        <button
+                        <div>
+                          <button
                           type="button"
                           className="btn text-light px-5"
                           style={{ backgroundColor: "#2AA8FF" }}
@@ -203,6 +201,7 @@ const SearchResultsPage = () => {
                         >
                           Book FREE Center Visit
                         </button>
+                        </div>
                       )}
                     </div>
                   </div>
@@ -487,9 +486,9 @@ const SearchResultsPage = () => {
             )}
           </div>
 
-          <div className="w-25 bookAppointment mt-3">
+          {!getHealthCenter.length < 1 && <div className="w-25 bookAppointment mt-0 mt-lg-3 mb-5">
             <img src={ad} alt="ads" />
-          </div>
+          </div>}
         </div>
       </div>
       <FaqSection />

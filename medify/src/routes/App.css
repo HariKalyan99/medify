@@ -255,9 +255,41 @@ background: linear-gradient(98deg, rgba(231,240,255,1) 0%, rgba(232,241,255,0.47
     height: 100%;
 }
 
+ .mainBook {
+    display: flex;
+} 
+
+.hospitalNameText {
+    font-size: 20px;
+}
+
+
+
 @media (max-width: 992px) {
     .navigationLink:hover {
         color: blue;
+    }
+}
+
+@media (max-width: 1440px) {
+    .mainBook {
+        display: flex;
+        flex-direction: column;
+    }
+    .mainBook2 {
+        width: 100%;
+        
+    }
+}
+
+@media (min-width: 1440px) and (max-width: 2560px){
+    .mainBook {
+        display: flex;
+        flex-direction: column;
+    }
+    .mainBook2 {
+        width: 100%;
+        
     }
 }
 
@@ -274,7 +306,17 @@ background: linear-gradient(98deg, rgba(231,240,255,1) 0%, rgba(232,241,255,0.47
     .patientCaring {
         height: 100%;
     }
-
+    .mainBook {
+        display: flex;
+        flex-direction: column;
+    }
+    .mainBook2 {
+        width: 100%;
+        
+    }
+    .hospitalNameText {
+        font-size: 15px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -332,7 +374,7 @@ background: linear-gradient(98deg, rgba(231,240,255,1) 0%, rgba(232,241,255,0.47
     .playBtn {
         width: 274px;
     }
-
+    
     
 
 }
@@ -443,6 +485,18 @@ background: linear-gradient(98deg, rgba(231,240,255,1) 0%, rgba(232,241,255,0.47
         align-items: center;
         gap: 10px;
         margin-top: 30px;
+    }
+    .bookContainer1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .subBookContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100% !important;
     }
     
 }

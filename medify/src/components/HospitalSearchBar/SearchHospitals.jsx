@@ -42,7 +42,6 @@ const SearchHospitals = ({ from }) => {
               
               style={{
                 backgroundColor: "#FAFBFE",
-                width: "285px",
                 height: "50px",
                 border: 'none',
                 borderRadius: "10px",
@@ -83,7 +82,7 @@ const SearchHospitals = ({ from }) => {
             className="btn text-light px-5"
             style={{ backgroundColor: "#2AA8FF" }}
           >
-            <IoIosSearch size={30} /> Search
+            <IoIosSearch size={30} /> <span className="d-none d-lg-block">Search</span>
           </button>
         </form>
 
