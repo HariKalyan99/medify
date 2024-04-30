@@ -8,7 +8,7 @@ import liststyle from "../../assets/liststyle.svg";
 const PatientCaring = () => {
   return (
     <div className="patientCaring d-flex justify-content-center">
-        <div className="container m-5 d-flex" style={{ gap: "100px" }}>
+        <div className="container m-5 d-flex patientCaring2" style={{ gap: "100px" }}>
           <div className="d-flex flex-column">
             <div className="w-100 d-flex justify-content-evenly">
               <div
@@ -31,14 +31,13 @@ const PatientCaring = () => {
                 <p>Consultation with the best</p>
               </div>
 
-              <div className=" position-relative top-0">
+              <div className=" position-relative top-0 careImg">
                 <img src={pc1} alt="" />
               </div>
             </div>
 
             <div
-              className=" position-relative"
-              style={{ top: "-50px", left: "50px" }}
+              className=" position-relative careImg2"
             >
               <img src={pc2} alt="patientcaring-2" />
             </div>

@@ -1,0 +1,28 @@
+.landingPageInput1 {
+    width: 285px;
+}
+
+
+.landingPageInput2 {
+    width: 285px;
+}
+@media (max-width: 768px) {
+    .landingPageInput1 {
+        width: 185px;
+    }
+    .landingPageInput2 {
+        width: 185px;
+    }
+
+
+}
+
+@media (min-width: 375px) and (max-width: 425px) {
+    
+    .landingPageInput1 {
+        width: 100px;    
+    }
+    .landingPageInput2 {
+        width: 100px;
+    }
+}

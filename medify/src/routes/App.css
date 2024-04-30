@@ -160,6 +160,10 @@ background: linear-gradient(98deg, rgba(231,240,255,1) 0%, rgba(232,241,255,0.47
     margin-left: 70px !important;
 }
 
+.offercarouselLand {
+    margin-top: 200px;
+}
+
 .timeBtn {
     background-color: #ffffff;
 }
@@ -173,8 +177,272 @@ background: linear-gradient(98deg, rgba(231,240,255,1) 0%, rgba(232,241,255,0.47
     background-color: #2AA7FF !important;
 }
 
+
+
+.appInput {
+    width: 316px;
+}
+
+
+.heroImage {
+    display: flex;
+}
+
+.specializedContainer {
+    width: 270px;
+}
+
+.patientCaring2 {
+    width: 100%;
+}
+
+.contribute2 {
+    height: 789px;
+    width: 100%;
+}
+
+.contributeTrends {
+    width: 50%;
+}
+
+.faqContainer {
+    display: flex;
+}
+.appDownload2 {
+    display: flex;
+}
+
+.sendSmsBtn {
+    height: 47px;
+}
+
+.footApp {
+    width: 50%;
+}
+
+.playBtn {
+    width: 224px;
+}
+
+.heroDiv {
+    display: flex;
+}
+
+.medCenterDiv {
+    width: 50%;
+}
+.searchSpan {
+    font-size: small;
+}
+
+.searchDiv {
+    top: 550px;
+}
+
+.landImage {
+    width: 401px;
+}
+
+.careImg2 {
+    top: -50px;
+     left: 50px;
+}
+
+.contImg {
+    width: 242px;
+}
+.faqImg {
+    height: 100%;
+}
+
 @media (max-width: 992px) {
     .navigationLink:hover {
         color: blue;
     }
+}
+
+@media (max-width: 1024px) {
+    .appInput {
+        width: 206px;
+    }
+    .patientCaring2 {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .patientCaring {
+        height: 100%;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .heroImage {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        top: 100px;
+    }
+    .specializedContainer {
+        width: 200px;
+    }
+    .patientCaring {
+        height: 100%;
+    }
+    .contribute {
+        height: 100%;
+        
+    }
+    
+    .contribute2 {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .contributeTrends {
+        padding-top: 20px;
+        width: 100%;
+    }
+    .faqContainer {
+       flex-wrap: wrap;
+       justify-content: center;
+       align-items: center;
+    }
+
+    .appDownload{
+        height: 100%;
+    }
+    .appDownload2 {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        padding-top: 20px;
+    }
+    .footApp {
+        width: 100%;
+        padding-right: 100px;
+    }
+    .appInput {
+        width: 286px;
+    }
+
+    .playBtn {
+        width: 274px;
+    }
+
+    
+
+}
+
+
+@media (min-width: 375px) and (max-width: 425px) {
+    .heroDiv {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .heroContainer {
+        height: 100%;
+        
+    }
+    .medCenterDiv {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .medCenterDiv, h1, p {
+        text-align: center;
+    }
+    .searchSpan {
+       display: none;
+    }
+    .searchDiv {
+        top: 900px;
+    }
+    .offercarouselLand {
+        margin-top: 400px;
+    }
+    .landImage {
+        width: 250px;
+    }
+    .specializedContainer {
+        width: 170px;
+    }
+    .specialization {
+        height: 100%;
+        
+    }
+    .specialization2 {
+        justify-content: center;
+        gap: 5px;
+    }
+    .findText {
+        margin-top: 10px;
+    }
+    .heroImage {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        top: 70px;
+    }
+    .docd1 {
+        width: 100%;
+    }
+    .doctoreBg {
+    height: 340px;
+    width: 270px;
+
+    }
+    .textAl {
+        margin-right: 150px;
+    }
+    .careImg {
+        display: none;
+    }
+    .careImg2 {
+         left: 0px;
+    }
+    .contImg {
+        width: 140px;
+    }
+    .faqImg {
+        width: 100%;
+    }
+    .appInput {
+        width: 106px;
+    }
+    .playText {
+        display: none;
+    }
+
+    .smsText {
+        display: none;
+    }
+    .appImg {
+        width: 150px;
+        padding-right: 20px;
+    }
+    .foot {
+        height: 100%;
+    }
+    .mainFooter {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .subFooter1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-top: 30px;
+    }
+    
 }

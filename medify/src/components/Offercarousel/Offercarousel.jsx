@@ -8,7 +8,7 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/navigation";
 // import required modules
-import "./Offercarousel.module.css";
+import styles from "../Offercarousel/Offercarousel.module.css";
 
 import { Pagination, Scrollbar, Navigation } from "swiper/modules";
 import client1 from "../../assets/offer1.svg";
@@ -54,12 +54,20 @@ export default function Offercarousel({ from, dateForLocal }) {
             clickable: true,
           }}
           breakpoints={{
+            375: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            425: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
             640: {
               slidesPerView: 1.5,
               spaceBetween: 20,
             },
             768: {
-              slidesPerView: 3.5,
+              slidesPerView: 2,
               spaceBetween: 40,
             },
             1024: {
@@ -72,20 +80,20 @@ export default function Offercarousel({ from, dateForLocal }) {
             },
           }}
           modules={[Pagination]}
-          className="mySwiper"
+          className="mySwiper "
         >
           <SwiperSlide>
             <div className="doctoreBg mb-5 mt-2">
-              <img src={d1} alt="docd1" />
+              <img src={d1} alt="docd1" className="docd1"/>
             </div>
             <h1
-              className="text-center "
+              className="text-center textAl "
               style={{ fontSize: "24px", color: "#1B3C74" }}
             >
               Dr. Lesley Hull
             </h1>
             <p
-              className="text-center mb-5"
+              className="text-center textAl mb-5"
               style={{ fontSize: "16px", color: "#2AA7FF" }}
             >
               Medicine
@@ -93,16 +101,16 @@ export default function Offercarousel({ from, dateForLocal }) {
           </SwiperSlide>
           <SwiperSlide>
             <div className="doctoreBg mb-5 mt-2">
-              <img src={d2} alt="docd2" />
+              <img src={d2} alt="docd2" className="docd1"/>
             </div>
             <h1
-              className="text-center "
+              className="text-center textAl "
               style={{ fontSize: "24px", color: "#1B3C74" }}
             >
               Dr. Ahmad Khan
             </h1>
             <p
-              className="text-center mb-5"
+              className="text-center textAl mb-5"
               style={{ fontSize: "16px", color: "#2AA7FF" }}
             >
               Neurologist
@@ -110,16 +118,16 @@ export default function Offercarousel({ from, dateForLocal }) {
           </SwiperSlide>
           <SwiperSlide>
             <div className="doctoreBg mb-5 mt-2">
-              <img src={d3} alt="docd3" />
+              <img src={d3} alt="docd3" className="docd1"/>
             </div>
             <h1
-              className="text-center "
+              className="text-center textAl "
               style={{ fontSize: "24px", color: "#1B3C74" }}
             >
               Dr. Heena Sachdeva
             </h1>
             <p
-              className="text-center mb-5"
+              className="text-center textAl mb-5"
               style={{ fontSize: "16px", color: "#2AA7FF" }}
             >
               Orthopadics
@@ -127,16 +135,16 @@ export default function Offercarousel({ from, dateForLocal }) {
           </SwiperSlide>
           <SwiperSlide>
             <div className="doctoreBg mb-5 mt-2">
-              <img src={d4} alt="docd4" />
+              <img src={d4} alt="docd4" className="docd1"/>
             </div>
             <h1
-              className="text-center "
+              className="text-center textAl "
               style={{ fontSize: "24px", color: "#1B3C74" }}
             >
               Dr. Ankur Sharma
             </h1>
             <p
-              className="text-center mb-5"
+              className="text-center textAl mb-5"
               style={{ fontSize: "16px", color: "#2AA7FF" }}
             >
               Medicine
@@ -144,16 +152,16 @@ export default function Offercarousel({ from, dateForLocal }) {
           </SwiperSlide>
           <SwiperSlide>
             <div className="doctoreBg mb-5 mt-2">
-              <img src={d5} alt="docd5" />
+              <img src={d5} alt="docd5" className="docd1"/>
             </div>
             <h1
-              className="text-center "
+              className="text-center textAl "
               style={{ fontSize: "24px", color: "#1B3C74" }}
             >
               Dr. Ahmad Khan
             </h1>
             <p
-              className="text-center mb-5"
+              className="text-center textAl mb-5"
               style={{ fontSize: "16px", color: "#2AA7FF" }}
             >
               Neurologist
@@ -162,16 +170,16 @@ export default function Offercarousel({ from, dateForLocal }) {
 
           <SwiperSlide>
             <div className="doctoreBg mb-5 mt-2">
-              <img src={d3} alt="docd3" />
+              <img src={d3} alt="docd3" className="docd1"/>
             </div>
             <h1
-              className="text-center "
+              className="text-center textAl "
               style={{ fontSize: "24px", color: "#1B3C74" }}
             >
               Dr. Heena Sachdeva
             </h1>
             <p
-              className="text-center mb-5"
+              className="text-center textAl mb-5"
               style={{ fontSize: "16px", color: "#2AA7FF" }}
             >
               Orthopadics
@@ -179,16 +187,16 @@ export default function Offercarousel({ from, dateForLocal }) {
           </SwiperSlide>
           <SwiperSlide>
             <div className="doctoreBg mb-5 mt-2">
-              <img src={d4} alt="docd4" />
+              <img src={d4} alt="docd4" className="docd1"/>
             </div>
             <h1
-              className="text-center "
+              className="text-center textAl "
               style={{ fontSize: "24px", color: "#1B3C74" }}
             >
               Dr. Ankur Sharma
             </h1>
             <p
-              className="text-center mb-5"
+              className="text-center textAl mb-5"
               style={{ fontSize: "16px", color: "#2AA7FF" }}
             >
               Medicine
@@ -196,16 +204,16 @@ export default function Offercarousel({ from, dateForLocal }) {
           </SwiperSlide>
           <SwiperSlide>
             <div className="doctoreBg mb-5 mt-2">
-              <img src={d5} alt="docd5" />
+              <img src={d5} alt="docd5" className="docd1"/>
             </div>
             <h1
-              className="text-center "
+              className="text-center textAl "
               style={{ fontSize: "24px", color: "#1B3C74" }}
             >
               Dr. Ahmad Khan
             </h1>
             <p
-              className="text-center mb-5"
+              className="text-center textAl mb-5"
               style={{ fontSize: "16px", color: "#2AA7FF" }}
             >
               Neurologist
@@ -262,6 +270,14 @@ export default function Offercarousel({ from, dateForLocal }) {
             clickable: true,
           }}
           breakpoints={{
+            375: {
+              slidesPerView: 1,
+              spaceBetween: 80,
+            },
+            425: {
+              slidesPerView: 1,
+              spaceBetween: 100,
+            },
             640: {
               slidesPerView: 1,
               spaceBetween: 20,
@@ -280,25 +296,25 @@ export default function Offercarousel({ from, dateForLocal }) {
             },
           }}
           modules={[Pagination]}
-          className="mySwiper"
+          
         >
           <SwiperSlide>
-            <img src={client1} alt="ads" className="mb-5" />
+            <img src={client1} alt="ads" className="mb-5 landImage" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={client2} alt="ads" className="mb-5" />
+            <img src={client2} alt="ads" className="mb-5 landImage" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={client1} alt="ads" className="mb-5" />
+            <img src={client1} alt="ads" className="mb-5 landImage" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={client2} alt="ads" className="mb-5" />
+            <img src={client2} alt="ads" className="mb-5 landImage" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={client1} alt="ads" className="mb-5" />
+            <img src={client1} alt="ads" className="mb-5 landImage" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={client2} alt="ads" className="mb-5" />
+            <img src={client2} alt="ads" className="mb-5 landImage" />
           </SwiperSlide>
         </Swiper>
       </>

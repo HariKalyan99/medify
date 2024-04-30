@@ -11,14 +11,13 @@ import q from "../../assets/q.svg";
 const Specializations = () => {
   return (
     <div className="specialization mt-5 d-flex flex-column justify-content-center align-items-center mb-5">
-        <h1>Find by specialisation</h1>
-        <div className="d-flex justify-content-xl-between justify-content-lg-center flex-wrap align-items-center h-75 w-100 m-4 container g-5 gap-lg-3">
+        <h1 className='findText'>Find by specialisation</h1>
+        <div className="d-flex justify-content-md-center gap-md-3 justify-content-xl-between justify-content-lg-center flex-wrap align-items-center h-75 w-100 m-4 container g-5 gap-lg-3 mb-md-5 specialization2">
           <div
-            className="d-flex justify-content-center align-items-center flex-column"
+            className="d-flex justify-content-center align-items-center flex-column specializedContainer"
             style={{
               backgroundColor: "#FAFBFE",
               height: "180px",
-              width: "270px",
               borderRadius: "1rem",
               border: "none",
               boxShadow: "1px 10px 1rem #e0e2e7",
@@ -28,11 +27,11 @@ const Specializations = () => {
             <p>Dentistry</p>
           </div>
           <div
-            className="d-flex justify-content-center align-items-center flex-column"
+            className="d-flex justify-content-center align-items-center flex-column specializedContainer"
             style={{
               backgroundColor: "#FAFBFE",
               height: "180px",
-              width: "270px",
+              
               borderRadius: "1rem",
               border: "none",
               boxShadow: "1px 10px 1rem #e0e2e7",
@@ -42,11 +41,11 @@ const Specializations = () => {
             <p>Primary Care</p>
           </div>
           <div
-            className="d-flex justify-content-center align-items-center flex-column"
+            className="d-flex justify-content-center align-items-center flex-column specializedContainer"
             style={{
               backgroundColor: "#FAFBFE",
               height: "180px",
-              width: "270px",
+              
               borderRadius: "1rem",
               border: "none",
               boxShadow: "1px 10px 1rem #e0e2e7",
@@ -56,11 +55,11 @@ const Specializations = () => {
             <p>Cardiology</p>
           </div>
           <div
-            className="d-flex justify-content-center align-items-center flex-column"
+            className="d-flex justify-content-center align-items-center flex-column specializedContainer"
             style={{
               backgroundColor: "#FAFBFE",
               height: "180px",
-              width: "270px",
+              
               borderRadius: "1rem",
               border: "none",
               boxShadow: "1px 10px 1rem #e0e2e7",
@@ -70,11 +69,11 @@ const Specializations = () => {
             <p>MRI Resonance</p>
           </div>
           <div
-            className="d-flex justify-content-center align-items-center flex-column"
+            className="d-flex justify-content-center align-items-center flex-column specializedContainer"
             style={{
               backgroundColor: "#FAFBFE",
               height: "180px",
-              width: "270px",
+              
               borderRadius: "1rem",
               border: "none",
               boxShadow: "1px 10px 1rem #e0e2e7",
@@ -84,11 +83,11 @@ const Specializations = () => {
             <p>Blood Test</p>
           </div>
           <div
-            className="d-flex justify-content-center align-items-center flex-column"
+            className="d-flex justify-content-center align-items-center flex-column specializedContainer"
             style={{
               backgroundColor: "#FAFBFE",
               height: "180px",
-              width: "270px",
+              
               borderRadius: "1rem",
               border: "none",
               boxShadow: "1px 10px 1rem #e0e2e7",
@@ -98,11 +97,11 @@ const Specializations = () => {
             <p>Piscologist</p>
           </div>
           <div
-            className="d-flex justify-content-center align-items-center flex-column"
+            className="d-flex justify-content-center align-items-center flex-column specializedContainer"
             style={{
               backgroundColor: "#FAFBFE",
               height: "180px",
-              width: "270px",
+              
               borderRadius: "1rem",
               border: "none",
               boxShadow: "1px 10px 1rem #e0e2e7",
@@ -112,11 +111,11 @@ const Specializations = () => {
             <p>Laboratory</p>
           </div>
           <div
-            className="d-flex justify-content-center align-items-center flex-column"
+            className="d-flex justify-content-center align-items-center flex-column specializedContainer"
             style={{
               backgroundColor: "#FAFBFE",
               height: "180px",
-              width: "270px",
+              
               borderRadius: "1rem",
               border: "none",
               boxShadow: "1px 10px 1rem #e0e2e7",
@@ -129,7 +128,7 @@ const Specializations = () => {
         <div>
           <button
             type="button"
-            className="btn text-light px-5 mt-lg-4 mb-lg-2"
+            className="btn text-light px-5 mt-lg-4 mb-lg-2 mb-3"
             style={{ backgroundColor: "#2AA8FF" }}
           >
             View All

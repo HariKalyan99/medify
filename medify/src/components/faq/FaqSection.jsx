@@ -9,9 +9,9 @@ const FaqSection = () => {
     <div className="container d-flex flex-column justify-content-center align-items-center w-100 mt-5 mb-2">
         <p>Get Your Answer</p>
         <h1>Frequently Asked Questions</h1>
-        <div className="d-flex justify-content-between align-items-center w-100">
+        <div className="d-flex justify-content-between align-items-center w-100 faqContainer">
           <div className=" position-relative d-flex">
-            <img src={FAQ1} alt="doctor-caring" />
+            <img src={FAQ1} alt="doctor-caring" className='faqImg'/>
             <div className=" position-absolute top-50 ">
            <div className="d-flex w-100 h-100 justify-content-center align-items-center px-3" style={{backgroundColor: "white", borderRadius: "1rem"}}>
            <div className="d-flex m-3" >

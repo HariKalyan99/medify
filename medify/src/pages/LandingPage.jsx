@@ -23,11 +23,10 @@ const LandingPage = () => {
 
         <div className="container-fluid d-flex justify-content-center">
           <div
-            className="d-flex flex-column container justify-content-center align-items-center"
+            className="d-flex flex-column container justify-content-center align-items-center searchDiv"
             style={{
               backgroundColor: "white",
               position: "absolute",
-              top: "550px",
               border: "none",
               borderRadius: "1.5rem",
               boxShadow: "0px 4px 4rem #e0e2e7",
@@ -39,8 +38,7 @@ const LandingPage = () => {
       </div>
 
       <div
-        className="container position-relative"
-        style={{ marginTop: "200px" }}
+        className="container position-relative offercarouselLand"
       >
         <Offercarousel />
       </div>

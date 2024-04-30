@@ -8,7 +8,7 @@ import con4 from "../../assets/con4.svg";
 const Contributions = () => {
   return (
     <div className="container-fluid contribute d-flex justify-content-center mb-2">
-        <div className="container d-flex justify-content-center align-items-center">
+        <div className="container-xl d-flex justify-content-center align-items-center contribute2">
           <div className="w-50">
             <p>CARING FOR THE HEALTH OF YOU AND YOUR FAMILY.</p>
             <h1>Our Families</h1>
@@ -20,14 +20,14 @@ const Contributions = () => {
               confidence.
             </p>
           </div>
-          <div className="w-50 d-flex justify-content-evenly">
+          <div className="d-flex justify-content-evenly contributeTrends">
             <div className="d-flex flex-column">
               <div
-                className="d-flex justify-content-center align-items-center flex-column mb-5"
+                className="d-flex justify-content-center align-items-center flex-column mb-5 contImg"
                 style={{
                   backgroundColor: "#FAFBFE",
                   height: "304px",
-                  width: "242px",
+                  
                   borderRadius: "1rem",
                   border: "none",
                   boxShadow: "1px 10px 1rem #e0e2e7",
@@ -38,11 +38,11 @@ const Contributions = () => {
                 <p>Dentistry</p>
               </div>
               <div
-                className="d-flex justify-content-center align-items-center flex-column "
+                className="d-flex justify-content-center align-items-center flex-column  contImg"
                 style={{
                   backgroundColor: "#FAFBFE",
                   height: "304px",
-                  width: "242px",
+                  
                   borderRadius: "1rem",
                   border: "none",
                   boxShadow: "1px 10px 1rem #e0e2e7",
@@ -55,11 +55,11 @@ const Contributions = () => {
             </div>
             <div className="d-flex flex-column">
               <div
-                className="d-flex justify-content-center align-items-center flex-column mt-5"
+                className="d-flex justify-content-center align-items-center flex-column mt-5 contImg"
                 style={{
                   backgroundColor: "#FAFBFE",
                   height: "304px",
-                  width: "242px",
+                  
                   borderRadius: "1rem",
                   border: "none",
                   boxShadow: "1px 10px 1rem #e0e2e7",
@@ -70,11 +70,11 @@ const Contributions = () => {
                 <p>Dentistry</p>
               </div>
               <div
-                className="d-flex justify-content-center align-items-center flex-column mt-5"
+                className="d-flex justify-content-center align-items-center flex-column mt-5 contImg"
                 style={{
                   backgroundColor: "#FAFBFE",
                   height: "304px",
-                  width: "242px",
+                  
                   borderRadius: "1rem",
                   border: "none",
                   boxShadow: "1px 10px 1rem #e0e2e7",

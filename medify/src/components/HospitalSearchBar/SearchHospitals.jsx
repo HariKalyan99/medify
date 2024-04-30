@@ -7,6 +7,7 @@ import doctors from "../../assets/doctors.svg";
 import labs from "../../assets/labs.svg";
 import hospitals from "../../assets/hospitals.svg";
 import { CiLocationOn } from "react-icons/ci";
+import styles from '../HospitalSearchBar/SearchHospitals.module.css'
 
 const SearchHospitals = ({ from }) => {
   const {
@@ -131,14 +132,13 @@ const SearchHospitals = ({ from }) => {
           <div>
             
             <input
-              className="form-control"
+              className={`form-control ${styles.landingPageInput1}`}
               list="datalistOptions"
               id="exampleDataList"
               placeholder="State"
               onChange={(e) => handleInputState(e.target.value)}
               style={{
                 backgroundColor: "#FAFBFE",
-                width: "285px",
                 height: "50px",
               }}
               required
@@ -152,14 +152,14 @@ const SearchHospitals = ({ from }) => {
 
           <div>
             <input
-              className="form-control"
+              className={`form-control ${styles.landingPageInput2}`}
               list="datalistOptions2"
               id="exampleDataList2"
               placeholder="City"
               onChange={(e) => handleInputCity(e.target.value)}
               style={{
                 backgroundColor: "#FAFBFE",
-                width: "285px",
+                
                 height: "50px",
               }}
               required
@@ -176,10 +176,10 @@ const SearchHospitals = ({ from }) => {
             disabled={
               stateList.length > 1 && cityList.length > 0 ? false : true
             }
-            className="btn text-light px-5"
+            className="btn text-light px-2 px-xl-5"
             style={{ backgroundColor: "#2AA8FF" }}
           >
-            <IoIosSearch size={30} /> Search
+            <IoIosSearch size={30} /> <span className="searchSpan">Search</span>
           </button>
         </form>
 
@@ -187,7 +187,7 @@ const SearchHospitals = ({ from }) => {
           <h1 style={{ fontSize: "20px" }}>You may be looking for</h1>
         </div>
 
-        <div className="d-flex justify-content-between align-items-center h-100 w-100 m-4">
+        <div className="d-flex justify-content-md-center justify-content-lg-between align-items-center h-100 w-100 m-4 flex-xl-wrap gap-md-3">
           <div
             className="d-flex justify-content-center align-items-center flex-column"
             style={{
