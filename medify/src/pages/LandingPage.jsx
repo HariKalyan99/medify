@@ -14,7 +14,7 @@ import LatestNews from "../components/latestnews/LatestNews";
 import Contributions from "../components/Contribute/Contributions";
 const LandingPage = () => {
   return (
-    <div  className="h-100">
+    <div  className="h-auto overflow-hidden">
       <Banner />
 
       <div className="heroContainer">
