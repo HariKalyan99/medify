@@ -14,7 +14,7 @@ import LatestNews from "../components/latestnews/LatestNews";
 import Contributions from "../components/Contribute/Contributions";
 const LandingPage = () => {
   return (
-    <div>
+    <div  className="h-100">
       <Banner />
 
       <div className="heroContainer">

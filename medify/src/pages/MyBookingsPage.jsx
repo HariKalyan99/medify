@@ -20,7 +20,7 @@ const MyBookingsPage = () => {
   }, []);
 
   return (
-    <div>
+    <div  className="h-100">
       <Banner />
       <NavigationBar />
 
