@@ -48,7 +48,7 @@ const SearchResultsPage = () => {
   }, [hospitalId]);
 
   return (
-    <div className="h-100">
+    <div className="h-auto overflow-hidden">
       <Banner />
       <NavigationBar becomeActive={"findDoctors"} />
 
